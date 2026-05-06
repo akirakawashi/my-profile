@@ -3,512 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Александр Ожерельев - Resume</title>
+    <meta name="description" content="Резюме Александра Ожерельева, Backend Developer / Python Engineer.">
+    <title>Александр Ожерельев | Backend Developer / Python Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <div class="wrapper">
-        <aside class="sidebar">
-            <div class="profile-card">
-                <div class="profile-image">
+<body data-theme="paper">
+    <div class="page-shell">
+        <div class="theme-toolbar panel" role="group" aria-label="Выбор темы резюме">
+            <p class="theme-toolbar__label">Тема</p>
+            <div class="theme-switcher">
+                <button class="theme-switcher__button is-active" type="button" data-theme-toggle="paper" aria-pressed="true">Светлая</button>
+                <button class="theme-switcher__button" type="button" data-theme-toggle="graphite" aria-pressed="false">Темная</button>
+            </div>
+        </div>
+
+        <header class="masthead panel">
+            <div class="masthead__copy">
+                <p class="eyebrow">Backend Developer / Python Engineer</p>
+                <h1>Александр Ожерельев</h1>
+                <p class="lead">
+                    Backend-разработчик с коммерческим опытом разработки сервисов на Python и FastAPI,
+                    проектирования SQL- и PL/SQL-логики, интеграции распределенных систем и сопровождения
+                    production-инфраструктуры.
+                </p>
+                <p class="lead lead--secondary">
+                    Закрываю полный цикл разработки: от модели данных, бизнес-логики и API до CI/CD,
+                    деплоя, мониторинга и поддержки рабочих сред. Дополнительно развиваюсь в AI/ML-направлении:
+                    LLM-интеграции, Speech-to-Text и обработка данных.
+                </p>
+
+                <div class="focus-list" aria-label="Ключевые фокусы">
+                    <span>Python / FastAPI</span>
+                    <span>SQL / PL/SQL</span>
+                    <span>PostgreSQL / Oracle</span>
+                    <span>Kafka / RabbitMQ</span>
+                    <span>Docker / CI/CD</span>
+                    <span>AI / ML Integration</span>
+                </div>
+            </div>
+
+            <div class="masthead__aside">
+                <figure class="portrait">
                     <img src="myphoto.jpg" alt="Александр Ожерельев">
-                </div>
-                <h1>Александр<br>Ожерельев</h1>
-                <p class="title">Backend-разработчик</p>
+                </figure>
 
-                <div class="info-item">
-                    <div class="info-label">Город</div>
-                    <div class="info-value">Курган, Россия</div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Email</div>
-                    <div class="info-value">akirakawashi@yandex.ru</div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Телефон</div>
-                    <div class="info-value">+7 (951) 262-62-67</div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Website</div>
-                    <div class="info-value"><a href="https://ainocraft.com" target="_blank">https://ainocraft.com</a></div>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://ainocraft.com" title="AiNoCraft" target="_blank">🌐</a>
-                    <a href="https://github.com/akirakawashi" title="GitHub" target="_blank" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1-.02-1.96-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.42-1.305.763-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.181 0 0 1.008-.322 3.3 1.23.957-.266 1.98-.399 3-.405 1.02.006 2.043.139 3 .405 2.29-1.552 3.296-1.23 3.296-1.23.653 1.654.242 2.878.12 3.181.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.624-5.48 5.92.43.372.823 1.103.823 2.222 0 1.605-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.299 24 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://t.me/akirakawashi" title="Telegram" target="_blank" aria-label="Telegram">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M21.654 3.059c-.216-.2-.532-.235-.786-.089L2.97 11.693c-.566.255-.543 1.073.033 1.295l3.78 1.406 1.46 4.45c.179.547.79.71 1.17.322l2.042-2.09 3.261 2.37c.59.43 1.4.09 1.57-.6l1.948-10.85c.185-1.03-.56-1.445-1.28-1.84zM9.98 14.12L8.98 9.98l8.02-4.92-6.02 8.06z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:akirakawashi@yandex.ru" title="Email">✉</a>
-                </div>
+                <section class="contact-card" aria-labelledby="contacts-title">
+                    <h2 id="contacts-title">Контакты</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Локация</span>
+                            <span>Курган</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:akirakawashikz@gmail.com">akirakawashikz@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Телефон</span>
+                            <a href="tel:+79995491000">+7 999 549-10-00</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Telegram</span>
+                            <a href="https://t.me/akirakawashi" target="_blank" rel="noreferrer">@akirakawashi</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Website</span>
+                            <a href="https://ainocraft.com" target="_blank" rel="noreferrer">ainocraft.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Portfolio</span>
+                            <a href="https://akirakawashi.github.io/my-profile/" target="_blank" rel="noreferrer">akirakawashi.github.io/my-profile/</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/akirakawashi" target="_blank" rel="noreferrer">github.com/akirakawashi</a>
+                        </li>
+                    </ul>
+                </section>
             </div>
-        </aside>
+        </header>
 
-        <main class="content">
-            <section class="section-block" id="experience">
-                <h2>Опыт работы</h2>
-
-                <div class="experience-item">
-                    <h3>Автор проекта AiNoCraft</h3>
-                    <br>
-                    <div class="period">Январь 2026 - Настоящее время · AiNoCraft, Москва</div>
-                    <p>Разработка игрового сервера Minecraft с микросервисной архитектурой: FastAPI backend, React frontend, PostgreSQL + Redis + MinIO. Настроил полный CI/CD pipeline, систему аутентификации с JWT, собственный лаунчер на PyQt5. Разработка и оптимизация модов на Java.</p>
-                    <button class="details-btn" onclick="openModal('modal1')">Подробнее →</button>
-                </div>
-
-                <div class="experience-item">
-                    <h3>SQL-разработчик / Специалист поддержки ППО</h3>
-                    <br>
-                    <div class="period">Февраль 2024 - Настоящее время · АйСи Эйт, Геленджик</div>
-                    <p>Полный цикл разработки БД: проектирование схемы данных, разработка и оптимизация PL/SQL (пакеты, процедуры, функции, триггеры). Создание комплексных отчетов, поддержка пользователей. Продвинулся от позиции поддержки до разработчика-SQL.</p>
-                    <button class="details-btn" onclick="openModal('modal2')">Подробнее →</button>
-                </div>
-
-                <div class="experience-item">
-                    <h3>ML Engineer (Computer Vision) - Фриланс</h3>
-                    <br>
-                    <div class="period">Февраль 2025 - Март 2025 · Фриланс, Москва</div>
-                    <p>Система видеомониторинга для автоматизации управления шлагбаумом. Реализовал пайплайн обработки видео в реальном времени с YOLOv8, детекцией объектов в пользовательской зоне ROI. Стек: Python, YOLOv8, OpenCV.</p>
-                    <button class="details-btn" onclick="openModal('modal3')">Подробнее →</button>
-                </div>
-
-                <div class="experience-item">
-                    <h3>ML Engineer (Audio → JSON) - Фриланс</h3>
-                    <br>
-                    <div class="period">Январь 2025 - Февраль 2025 · Фриланс, Москва</div>
-                    <p>Преобразование речи из записей звонков в структурированный JSON. Двухуровневый пайплайн: Whisper (OpenAI) для Speech-to-Text + LLM через Hugging Face для извлечения сущностей. Стек: Python, PyTorch, Transformers.</p>
-                    <button class="details-btn" onclick="openModal('modal4')">Подробнее →</button>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Системный администратор</h3>
-                    <br>
-                    <div class="period">Октябрь 2022 - Февраль 2024 · КонсультантПлюс, Симферополь</div>
-                    <p>Полный цикл IT-поддержки: настройка серверов, администрирование локальной сети, IP-телефония. Первый опыт в инженерии данных - настройка миграции данных из CRM в БД.</p>
-                    <button class="details-btn" onclick="openModal('modal5')">Подробнее →</button>
-                </div>
-            </section>
-
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <h2>AiNoCraft - Мой проект</h2>
-                    <div class="modal-period">Январь 2026 - Настоящее время · AiNoCraft, Москва</div>
-                    
-                    <div class="modal-section">
-                        <h3>О проекте: (Разработка началась с 1 Января 2026)</h3>
-                        <p>AiNoCraft — это авторский игровой сервер Minecraft в аниме-стилистике с полноценным веб‑порталом, собственным лаунчером и набором кастомных модов. Проект фокусируется на глубокой автоматизации производственных цепочек и плотной интеграции игрового клиента с аккаунтной системой на сайте.</p>
+        <main class="resume-layout">
+            <div class="resume-main">
+                <section class="panel">
+                    <div class="section-heading">
+                        <p class="section-kicker">Профиль</p>
+                        <h2>Профессиональное позиционирование</h2>
                     </div>
 
-                    <div class="modal-section">
-                        <h3>Архитектура</h3>
-                        <p>Микросервисная архитектура: контейнеризированные сервисы, API на FastAPI и фоновые задачи для обработок. Хранение данных в реляционной БД, кэширование и быстрый доступ через Redis, объектное хранилище для медиа (MinIO). Система разворачивается через Docker и автоматизированный CI/CD.</p>
-                    </div>
+                    <p>
+                        Основной фокус: backend-архитектура, разработка API, работа с данными и надежные
+                        production-окружения. Комфортно чувствую себя в среде, где нужно одновременно мыслить
+                        как разработчик, интегратор и инженер сопровождения.
+                    </p>
+                    <p>
+                        Параллельно развиваю собственный продукт AiNoCraft: микросервисную платформу с backend,
+                        frontend, desktop launcher-клиентом и DevOps-инфраструктурой. Это усиливает мой практический
+                        опыт в проектировании систем с нуля и доведении их до рабочего production-состояния.
+                    </p>
 
-                    <div class="modal-section">
-                        <h3>Сайт: <a href="https://ainocraft.com" target="_blank">ainocraft.com</a></h3>
-                        <p>Полнофункциональный клиентский портал для игроков с личным кабинетом, управлением профилем, сменой пароля, загрузкой аватара, восстановлением доступа.</p>
-                        <p><strong>Технологии фронтенда:</strong> React, Docker (prod и dev)</p>
-                        <p><strong>CI/CD:</strong> настроен автоматический пайплайн: разработка в dev (наследуемся от дев) → merge в main → автоматический деплой + тесты (тесты при любом пуше)</p>
+                    <div class="metric-grid">
+                        <article class="metric">
+                            <span class="metric__label">Сильная сторона</span>
+                            <strong>Полный цикл backend-разработки: данные, API, интеграции и инфраструктура</strong>
+                        </article>
+                        <article class="metric">
+                            <span class="metric__label">Проектный контур</span>
+                            <strong>Корпоративные сервисы, AI/ML-пайплайны, внутренние платформы и pet-product</strong>
+                        </article>
+                        <article class="metric">
+                            <span class="metric__label">Формат работы</span>
+                            <strong>Удаленная работа, самостоятельное ведение задач, взаимодействие с командами и заказчиками</strong>
+                        </article>
                     </div>
+                </section>
 
-                    <div class="modal-section">
-                        <h3>Авторизация</h3>
-                        <p>Аутентификация реализована через access/refresh токены (15m/30d соответственно). Refresh в куках. Access токен обновляется в фоне (каждые 14 минут), а также при важных запросах идет проверка. Если токен протух, то интерцептор перехватывает его и получает новый access по refresh. Это происходит бесшовно для пользователя. Все сессии пишутся в таблицу сессий. Естественно на всё это есть защиты.</p>
-                    </div>
+                <section class="panel">
+                <div class="section-heading">
+                    <p class="section-kicker">Опыт</p>
+                    <h2>Опыт работы</h2>
+                </div>
 
-                    <div class="modal-section">
-                        <h3>Бекенд</h3>
-                        <p>Серверная часть написана на Python (FastAPI).</p>
-                        <p><strong>Инфраструктура включает:</strong></p>
-                        <ul>
-                            <li>PostgreSQL</li>
-                            <li>Redis (кеш)</li>
-                            <li>MinIO (s3 хранилище)</li>
-                            <li>Databasus (бекапы БД). Прикручен бот ТГ линкующий состояние</li>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-item__head">
+                            <div>
+                                <h3>Ведущий инженер серверной разработки Python</h3>
+                                <p class="company">АйСи Эйт</p>
+                            </div>
+                            <p class="period">Февраль 2026 — настоящее время</p>
+                        </div>
+                        <ul class="detail-list">
+                            <li>Разрабатываю и поддерживаю backend-сервисы на Python и FastAPI для корпоративных систем и интеграционных сценариев.</li>
+                            <li>Проектирую бизнес-логику, API и модели данных, работаю с PostgreSQL, Redis и Kafka.</li>
+                            <li>Повышаю отказоустойчивость backend-части, участвую в настройке CI/CD и production-окружений.</li>
                         </ul>
-                        <p>Продакшен инфра развернута на VPS (Ubuntu). Все порты закрыты - единственная точка входа nginx!</p>
-                        <p>Для разработки используется всё локально через docker-compose. В коде НИЧЕГО не меняется. В .env тоже. Написана Pydantic модель. Дефолт - localhost, прод - env.</p>
-                    </div>
+                    </article>
 
-                    <div class="modal-section">
-                        <h3>Лаунчер</h3>
-                        <p>Собственный лаунчер для запуска клиента игры (который качает его с сервера). Всё в автоматическом режиме. Написан с использованием PyQt5. На данный момент работает на Python, но в будущем будет переписан на Java.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Разработка и переписка модов</h3>
-                        <p>Пишу собственные моды и переписываю/оптимизирую существующие под свой сервер. Изначально продумываю эндгейм, чтобы предоставить юзеру лучший экспириенс и баланс. Так как сервер ориентирован на автоматизацию крафтов, но не с обычным AE2, а с моей разработкой, которая требует очень хорошей оптимизации.</p>
-                        <p>Планируется глубокая интеграция между сайтом и игровым клиентом для единого игрового опыта (профиль, достижения, внутриигровые привилегии и т.д.)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modal2" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal2')">&times;</span>
-                    <h2>SQL-разработчик / Специалист поддержки ППО</h2>
-                    <div class="modal-period">Февраль 2024 - Настоящее время · АйСи Эйт, Геленджик</div>
-                    
-                    <div class="modal-section">
-                        <h3>Полный цикл разработки и оптимизации БД</h3>
-                        <p>Проектирование и рефакторинг схемы данных (таблицы, индексы, вьюхи), разработка поддержка и оптимизация PL/SQL кода (пакеты, процедуры, функции, триггеры) для реализации бизнес-логики и обеспечении целостности данных.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Аналитика и автоматизация отчетности</h3>
-                        <p>Создание и оптимизация комплексных отчетов для бизнеса на основе сложных SQL-запросов. Интеграция отчетов в систему WMS</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Сопровождение и развитие системы</h3>
-                        <p>Поддержка пользователей системы, оперативное устранение инцидентов, консультация по использованию данных. Исправление ошибок пользователей и улучшение функционала.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Достижения</h3>
-                        <p>От позиции поддержки продвинулся до разработчика-SQL</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modal3" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal3')">&times;</span>
-                    <h2>Система видеомониторинга для контроля проезда (Computer Vision)</h2>
-                    <div class="modal-period">Февраль 2025 - Март 2025 · Фриланс, Москва</div>
-
-                    <div class="modal-section">
-                        <h3>Краткое описание</h3>
-                        <p>Процесс для детекции транспортных средств внутри фиксированной области интереса (ROI). Детекции вне ROI игнорируются, что снижает количество ложных срабатываний и уменьшает ненужную обработку.</p>
-                        <p>Полный код и пример находятся в <a href="https://github.com/akirakawashi/roi_detection_car" target="_blank">репозитории</a></p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Реализация</h3>
-                        <ul>
-                            <li><strong>Модель:</strong> предварительно обученная YOLOv8X (высокая точность).</li>
-                            <li><strong>Классы:</strong> passenger car и truck (остальные классы отфильтрованы).</li>
-                            <li><strong>ROI:</strong> полигональная область, заданная в коде — только детекции внутри неё учитываются.</li>
+                    <article class="timeline-item">
+                        <div class="timeline-item__head">
+                            <div>
+                                <h3>SQL Developer / Специалист поддержки ППО</h3>
+                                <p class="company">АйСи Эйт</p>
+                            </div>
+                            <p class="period">Февраль 2024 — Февраль 2026</p>
+                        </div>
+                        <ul class="detail-list">
+                            <li>Разрабатывал и сопровождал SQL- и PL/SQL-логику для корпоративной WMS-системы.</li>
+                            <li>Проектировал схемы данных, писал пакеты, процедуры, функции и оптимизировал критичные запросы и индексы.</li>
+                            <li>Автоматизировал отчетность, участвовал в ETL-процессах и вырос от поддержки до роли SQL-разработчика.</li>
                         </ul>
-                    </div>
+                    </article>
 
-                    <div class="modal-section">
-                        <h3>"Этапы"</h3>
-                        <ol>
-                            <li>Чтение входного видео построчно (frame by frame).</li>
-                            <li>Инференс YOLO на кадре; фильтрация по целевым классам.</li>
-                            <li>Проверка попадания центра бокса в ROI (shapely).</li>
-                            <li>Отрисовка боксов/меток и запись обработанного видео.</li>
-                        </ol>
-                    </div>
+                    <article class="timeline-item">
+                        <div class="timeline-item__head">
+                            <div>
+                                <h3>Автор и Fullstack Developer</h3>
+                                <p class="company">AiNoCraft</p>
+                            </div>
+                            <p class="period">Январь 2026 — настоящее время</p>
+                        </div>
+                        <ul class="detail-list">
+                            <li>Развиваю собственный production-проект: Minecraft-сервер с микросервисной платформой, веб-порталом и launcher-клиентом.</li>
+                            <li>Реализовал backend на FastAPI, JWT-авторизацию с access/refresh-токенами, React SPA и production-инфраструктуру на VPS.</li>
+                            <li>Построил dockerized dev/prod-окружения, CI/CD-пайплайн, систему резервного копирования и мониторинга через Telegram-бота.</li>
+                        </ul>
+                    </article>
 
-                    <div class="modal-section">
-                        <h3>Стек</h3>
-                        <p>Python, YOLOv8, OpenCV, алгоритм обработки полигонов</p>
-                    </div>
+                    <article class="timeline-item">
+                        <div class="timeline-item__head">
+                            <div>
+                                <h3>Python / AI Developer</h3>
+                                <p class="company">Фриланс</p>
+                            </div>
+                            <p class="period">Январь 2025 — Март 2025</p>
+                        </div>
+                        <ul class="detail-list">
+                            <li>Собирал AI-пайплайны для практических задач: Speech-to-Text, извлечение сущностей и структурирование данных.</li>
+                            <li>Использовал OpenAI Whisper, Hugging Face Transformers и PyTorch для решений под конкретные бизнес-сценарии.</li>
+                            <li>Настраивал очистку, постобработку и валидацию результатов, чтобы получать пригодный для интеграции выходной формат.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-item__head">
+                            <div>
+                                <h3>Системный администратор</h3>
+                                <p class="company">КонсультантПлюс</p>
+                            </div>
+                            <p class="period">Октябрь 2022 — Февраль 2024</p>
+                        </div>
+                        <ul class="detail-list">
+                            <li>Поддерживал и развивал серверную и сетевую инфраструктуру, работал с Linux, Windows Server и сетевыми сервисами.</li>
+                            <li>Настраивал VLAN, DHCP, DNS, маршрутизацию, firewall, резервное копирование и мониторинг.</li>
+                            <li>Получил первый опыт в инженерии данных через ETL-миграцию и синхронизацию данных из CRM.</li>
+                        </ul>
+                    </article>
                 </div>
+                </section>
+
+                <section class="panel">
+                <div class="section-heading">
+                    <p class="section-kicker">Кейсы</p>
+                    <h2>Избранные проекты</h2>
+                </div>
+
+                <div class="project-list">
+                    <article class="project-card">
+                        <h3>AiNoCraft</h3>
+                        <p>
+                            Авторский проект: микросервисная платформа для Minecraft-сервера с backend,
+                            веб-порталом, launcher-клиентом и production-инфраструктурой. В проекте реализованы
+                            FastAPI backend, JWT-аутентификация, React SPA, Docker-окружения и CI/CD-процессы.
+                        </p>
+                        <p class="stack">Python, FastAPI, PostgreSQL, Redis, MinIO, React, Docker, Nginx, CI/CD</p>
+                    </article>
+
+                </div>
+                </section>
+
+                <section class="panel">
+                <div class="section-heading">
+                    <p class="section-kicker">Образование</p>
+                    <h2>Образование и дополнительная информация</h2>
+                </div>
+
+                <div class="education-block">
+                    <div>
+                        <h3>Курганский государственный университет</h3>
+                        <p>Высшее образование, факультет транспортных систем</p>
+                        <p class="small-note">Специальность: высоковольтная электроэнергетика и электротехника, 2020</p>
+                    </div>
+
+                    <ul class="detail-list detail-list--compact">
+                        <li>Английский язык: B1.</li>
+                        <li>Готов к удаленной работе и командировкам.</li>
+                        <li>Водительские права: категория B.</li>
+                    </ul>
+                </div>
+                </section>
             </div>
 
-            <div id="modal4" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal4')">&times;</span>
-                    <h2>Перевод основной информации по товарам из аудио в JSON</h2>
-                    <div class="modal-period">Январь 2025 - Февраль 2025 · Фриланс, Москва</div>
-                    <div class="modal-section">
-                        <h3>Задача проекта</h3>
-                        <p>Автоматически извлекать ключевую информацию из телефонных записей и преобразовывать её в структурированный JSON — список позиций заказа, их количества и дополнительные примечания.</p>
+            <aside class="resume-sidebar">
+                <section class="panel panel--sticky">
+                    <div class="section-heading">
+                        <p class="section-kicker">Компетенции</p>
+                        <h2>Ключевые навыки</h2>
                     </div>
 
-                    <div class="modal-section">
-                        <h3>Реализация</h3>
-                        <p>Построил двухступенчатый пайплайн:</p>
-                        <ol>
-                            <li><strong>Whisper от OpenAI</strong> - Скачал и использовал предобученную модель для преобразования речи в текст.</li>
-                            <li><strong>LLM для структурирования</strong> - Для структурирования текста и извлечение сущностей применил LLM. По аналогии с пунктом выше нашел подходящую предобученную модель на Hugging Face и использовал её. Всё это делал используя PyTorch для её инференса. Результат - JSON с ключевыми данными.</li>
-                        </ol>
-                        <p>Включены шаги очистки текста, нормализации числовых значений и шаблонизации вывода, а также простая логика проверки стабильности результатов (через confidence/threshold и повторную агрегацию по нескольким сегментам).</p>
+                    <div class="skill-stack">
+                        <article class="skill-group">
+                            <h3>Backend и API</h3>
+                            <p>Python, FastAPI, REST API, Pydantic, SQLAlchemy, JWT Authentication, session management, asynchronous processing, worker processes, OOP.</p>
+                        </article>
+                        <article class="skill-group">
+                            <h3>Data и базы данных</h3>
+                            <p>PostgreSQL, Oracle, SQL, PL/SQL, Redis, MinIO, ETL pipelines, schema design, query optimization, reporting systems, data validation.</p>
+                        </article>
+                        <article class="skill-group">
+                            <h3>Интеграции и messaging</h3>
+                            <p>Apache Kafka, RabbitMQ, SOAP, Webhooks, WebDAV, Nextcloud API, Tilda API, внешние API и сервисные integration layers.</p>
+                        </article>
+                        <article class="skill-group">
+                            <h3>Infrastructure и DevOps</h3>
+                            <p>Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, Linux / Ubuntu, production deployment, monitoring, backups, reverse proxy.</p>
+                        </article>
+                        <article class="skill-group">
+                            <h3>AI / ML</h3>
+                            <p>LLM integrations, Hugging Face Transformers, OpenAI Whisper, PyTorch, TensorFlow / Keras, scikit-learn, recommendation systems.</p>
+                        </article>
+                        <article class="skill-group">
+                            <h3>Дополнительно</h3>
+                            <p>React, Vite, JavaScript, PyQt5, PyInstaller, PyWebView, Poetry, PDM, Ruff, Git, Linux / Windows administration, networking.</p>
+                        </article>
                     </div>
-
-                    <div class="modal-section">
-                        <h3>Формат вывода</h3>
-                        <p>Результат — JSON с ключевыми полями:</p>
-                            <pre>
-                                <code class="language-json">{
-                                "items": [
-                                    { "name": "Борщ", "qty": 2 }
-                                ],
-                                "notes": "без лука"
-                                }</code>
-                            </pre>
-                        <p>Формат легко адаптируется под требования заказчика.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Стек и зависимые компоненты</h3>
-                        <p>Python, PyTorch, Hugging Face Transformers (LLM), OpenAI Whisper (локально), дополнительные библиотеки: <code>numpy</code>, <code>Pillow</code> и т.д.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modal5" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal5')">&times;</span>
-                    <h2>Системный администратор</h2>
-                    <div class="modal-period">Октябрь 2022 - Февраль 2024 · КонсультантПлюс, Симферополь</div>
-
-                    <div class="modal-section">
-                        <h3>Поддержка и администрирование инфраструктуры</h3>
-                        <p>Обеспечивал стабильную работу серверной и клиентской инфраструктуры: установка и сопровождение серверов (Linux/Windows), настройка виртуальных окружений, организация резервного копирования и мониторинга. Администрировал локальную сеть (VLAN, DHCP, DNS, маршрутизация) и настраивал IP-телефонию, внедрял правила доступа и базовую защиту (firewall, учётные записи, бэкапы).</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Инженерия данных и автоматизация</h3>
-                        <p>Участвовал в проекте миграции данных из CRM в централизованную базу данных: сбор требований, разработка ETL-скриптов, очистка и валидация данных, настройка регулярных задач синхронизации. Автоматизировал процессы резервного копирования и восстановления, а также внедрил простые проверки целостности данных.</p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="section-block" id="education">
-                <h2>Образование</h2>
-
-                <div class="experience-item">
-                    <h3>Курганский государственный университет, Курган</h3>
-                    <br>
-                    <div class="period">2020 · Высшее</div>
-                    <p>Высоковольтная электроэнергетика и электротехника</p>
-                </div>
-            </section>
-
-            <section class="section-block" id="about">
-                <h2>Обо мне</h2>
-
-                <div class="experience-item">
-                    <p>Добрый день! Я разработчик с опытом в SQL, Python, React, Java и инженерии данных. Также занимался CV и LLM.</p>
-
-                    <p>Прошел путь от системного администратора к разработке, что дало мне глубокое понимание fullstack процессов — от инфраструктуры до backend-логики. Имею коммерческий опыт в разработке и поддержке PL/SQL, а также практические навыки в ML/CV на фриланс проектах.</p>
-
-                    <p>Являюсь автором амбициозного проекта (игровой сервер Minecraft) с полным циклом разработки: от проектирования архитектуры CI/CD до backend (FastAPI) и frontend (React). Постоянно учусь, активно использую современные инструменты и AI в разработке. Ищу команду сложных проектов, где смогу расти как специалист!</p>
-                </div>
-            </section>
-
-
-            <section class="section-block" id="skills">
-                <h2>Стек технологий</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4>Backend & Data</h4>
-                        <p>Python, FastAPI, SQLAlchemy, Alembic, Pydantic, PL/SQL, Pandas, NumPy, Kafka, ETL, Airflow</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <h4>Frontend</h4>
-                        <p>React, JavaScript, HTML/CSS, Vite, SPA-архитектура, TypeScript, Next.js</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <h4>Базы данных</h4>
-                        <p>PostgreSQL, Oracle, Redis, MinIO (S3), MongoDB</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <h4>DevOps & Инфраструктура</h4>
-                        <p>Docker, Docker Compose, Git, GitHub Actions, CI/CD, Nginx, Linux, VPS, Grafana</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <h4>ML & AI</h4>
-                        <p>PyTorch, TensorFlow, OpenCV, scikit-learn, YOLOv8, Whisper, LLM, Hugging Face Transformers, MLflow</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <h4>Игровая разработка</h4>
-                        <p>Java, Kotlin, Minecraft Forge/Fabric API, Bukkit/Spigot, Gradle/Maven, PyQt5</p>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </aside>
         </main>
     </div>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        (function () {
+            const storageKey = 'resume-theme';
+            const root = document.body;
+            const buttons = document.querySelectorAll('[data-theme-toggle]');
 
-        function createBackground() {
-            const container = document.createElement('div');
-            container.className = 'background-elements';
-            document.body.prepend(container);
+            function applyTheme(theme) {
+                root.dataset.theme = theme;
 
-            const colors = ['#93fcb1', '#5cffe9', '#6682ff'];
-
-            for (let i = 0; i < 15; i++) {
-                const ball = document.createElement('div');
-                ball.className = 'ball';
-                const size = Math.random() * 200 + 80; // 80-280px
-                ball.style.width = `${size}px`;
-                ball.style.height = `${size}px`;
-                ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-                ball.style.top = `${Math.random() * 100}%`;
-                ball.style.left = `${Math.random() * 100}%`;
-                ball.style.animationDelay = `${Math.random() * 10}s`;
-                ball.style.animationDuration = `${Math.random() * 15 + 20}s`;
-                container.appendChild(ball);
-            }
-
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                const size = Math.random() * 8 + 3; // 3-11px
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.bottom = '0';
-                particle.style.setProperty('--drift-x', `${Math.random() * 200 - 100}px`);
-                particle.style.animationDelay = `${Math.random() * 15}s`;
-                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
-                container.appendChild(particle);
-            }
-
-            for (let i = 0; i < 8; i++) {
-                const ring = document.createElement('div');
-                ring.className = 'ring';
-                const size = Math.random() * 150 + 100; // 100-250px
-                ring.style.width = `${size}px`;
-                ring.style.height = `${size}px`;
-                ring.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-                ring.style.top = `${Math.random() * 100}%`;
-                ring.style.left = `${Math.random() * 100}%`;
-                ring.style.animationDelay = `${Math.random() * 8}s`;
-                ring.style.animationDuration = `${Math.random() * 5 + 6}s`;
-                container.appendChild(ring);
-            }
-
-            for (let i = 0; i < 6; i++) {
-                const wave = document.createElement('div');
-                wave.className = 'wave';
-                wave.style.background = colors[Math.floor(Math.random() * colors.length)];
-                wave.style.top = `${Math.random() * 100}%`;
-                wave.style.animationDelay = `${Math.random() * 10}s`;
-                wave.style.animationDuration = `${Math.random() * 10 + 15}s`;
-                container.appendChild(wave);
-            }
-
-            for (let i = 0; i < 40; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 3}s`;
-                star.style.animationDuration = `${Math.random() * 2 + 2}s`;
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                star.style.background = color;
-                star.style.boxShadow = `0 0 10px ${color}`;
-                container.appendChild(star);
-            }
-
-            for (let i = 0; i < 10; i++) {
-                const line = document.createElement('div');
-                line.className = 'line';
-                line.style.width = `${Math.random() * 300 + 200}px`;
-                line.style.top = `${Math.random() * 100}%`;
-                line.style.animationDelay = `${Math.random() * 12}s`;
-                line.style.animationDuration = `${Math.random() * 8 + 10}s`;
-                container.appendChild(line);
-            }
-        }
-
-
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrolled = window.pageYOffset;
-                    const balls = document.querySelectorAll('.ball');
-                    balls.forEach((ball, index) => {
-                        const speed = (index % 3 + 1) * 0.2;
-                        ball.style.transform = `translateY(${scrolled * speed}px)`;
-                    });
-                    ticking = false;
+                buttons.forEach((button) => {
+                    const isActive = button.dataset.themeToggle === theme;
+                    button.classList.toggle('is-active', isActive);
+                    button.setAttribute('aria-pressed', String(isActive));
                 });
-                ticking = true;
             }
-        });
 
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            const waves = document.querySelectorAll('.wave');
-            waves.forEach((wave, index) => {
-                const offsetX = (x - 0.5) * 50 * (index + 1);
-                const offsetY = (y - 0.5) * 50 * (index + 1);
-                wave.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            const savedTheme = localStorage.getItem(storageKey);
+            applyTheme(savedTheme === 'graphite' ? 'graphite' : 'paper');
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const nextTheme = button.dataset.themeToggle;
+                    applyTheme(nextTheme);
+                    localStorage.setItem(storageKey, nextTheme);
+                });
             });
-        });
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            createBackground();
-            
-            document.querySelectorAll('.experience-item, .project-card, .skill-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
+        }());
     </script>
-    </div>
 </body>
 </html>
