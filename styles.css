@@ -1,45 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg: #ebe6dc;
-    --bg-top: #f7f3ec;
-    --surface: rgba(255, 255, 255, 0.74);
-    --surface-strong: rgba(255, 253, 249, 0.94);
-    --text: #1f2730;
-    --muted: #5f6973;
-    --line: rgba(31, 39, 48, 0.11);
-    --panel-border: rgba(255, 255, 255, 0.6);
+    --bg: #e8e3d8;
+    --bg-top: #f2ede4;
+    --surface: rgba(250, 246, 241, 0.70);
+    --surface-strong: rgba(248, 244, 238, 0.96);
+    --text: #1a2028;
+    --muted: #68737d;
+    --line: rgba(26, 32, 40, 0.10);
+    --panel-border: rgba(255, 255, 255, 0.52);
     --frame-line: rgba(15, 34, 40, 0.08);
     --accent: #2a4a52;
     --accent-strong: #18353b;
-    --accent-contrast: #f6f3ed;
-    --highlight: #806452;
+    --accent-contrast: #f5f1ea;
+    --highlight: #b87240;
     --glow-a: rgba(42, 74, 82, 0.08);
-    --glow-b: rgba(128, 100, 82, 0.08);
-    --card-tint-a: rgba(255, 255, 255, 0.96);
-    --card-tint-b: rgba(244, 239, 231, 0.92);
-    --shadow: 0 22px 54px rgba(31, 39, 48, 0.08);
+    --glow-b: rgba(184, 114, 64, 0.07);
+    --card-tint-a: rgba(252, 249, 244, 0.97);
+    --card-tint-b: rgba(240, 234, 224, 0.93);
+    --shadow: 0 20px 50px rgba(26, 32, 40, 0.07);
 }
 
 body[data-theme="graphite"] {
-    --bg: #161b1f;
-    --bg-top: #1e252a;
-    --surface: rgba(24, 30, 35, 0.84);
-    --surface-strong: rgba(21, 27, 31, 0.96);
-    --text: #edf1f2;
-    --muted: #a7b0b5;
-    --line: rgba(237, 241, 242, 0.14);
-    --panel-border: rgba(237, 241, 242, 0.08);
-    --frame-line: rgba(237, 241, 242, 0.1);
-    --accent: #9eb8b2;
-    --accent-strong: #dbe6e3;
-    --accent-contrast: #1c2428;
-    --highlight: #d0b08b;
-    --glow-a: rgba(126, 154, 148, 0.12);
-    --glow-b: rgba(165, 139, 111, 0.1);
-    --card-tint-a: rgba(26, 32, 37, 0.96);
-    --card-tint-b: rgba(19, 24, 28, 0.92);
-    --shadow: 0 26px 58px rgba(0, 0, 0, 0.24);
+    --bg: #111518;
+    --bg-top: #1a2026;
+    --surface: rgba(20, 26, 32, 0.88);
+    --surface-strong: rgba(16, 22, 27, 0.97);
+    --text: #edf1f3;
+    --muted: #9aa3ab;
+    --line: rgba(237, 241, 243, 0.11);
+    --panel-border: rgba(237, 241, 243, 0.07);
+    --frame-line: rgba(237, 241, 243, 0.09);
+    --accent: #8eb8b2;
+    --accent-strong: #d4e6e2;
+    --accent-contrast: #1a2428;
+    --highlight: #d0956a;
+    --glow-a: rgba(110, 148, 142, 0.14);
+    --glow-b: rgba(180, 130, 90, 0.10);
+    --card-tint-a: rgba(22, 28, 34, 0.97);
+    --card-tint-b: rgba(14, 19, 23, 0.96);
+    --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
 }
 
 * {
@@ -67,11 +67,15 @@ body {
 body::before {
     content: '';
     position: fixed;
-    inset: 18px;
-    border: 1px solid var(--frame-line);
-    border-radius: 32px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 55%, transparent 100%);
     pointer-events: none;
-    z-index: 20;
+    z-index: 200;
+    opacity: 0.65;
+    transition: background 0.25s ease;
 }
 
 img {
@@ -116,52 +120,73 @@ a:hover {
     transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.theme-toolbar {
+/* Controls bar */
+.controls-bar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
+    gap: 10px;
+    padding: 12px 16px;
     margin-bottom: 18px;
 }
 
-.theme-toolbar__label {
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.theme-switcher {
+/* Pill switch (theme & lang) */
+.pill-switch {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
     padding: 4px;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--surface-strong);
 }
 
-.theme-switcher__button {
+.pill-switch__track {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    border-radius: 999px;
+    background: var(--accent);
+    pointer-events: none;
+    transition:
+        left 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+        width 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 0;
+}
+
+.pill-switch__btn {
+    position: relative;
+    z-index: 1;
     border: 0;
     border-radius: 999px;
-    padding: 9px 14px;
+    padding: 8px 15px;
     background: transparent;
-    color: var(--muted);
     cursor: pointer;
+    font-family: inherit;
+    font-size: 0.81rem;
     font-weight: 700;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    transition: color 0.22s ease;
+    white-space: nowrap;
+    text-align: center;
 }
 
-.theme-switcher__button:hover {
-    color: var(--accent-strong);
-    background: color-mix(in srgb, var(--accent) 10%, transparent);
+#theme-switch .pill-switch__btn {
+    min-width: 72px;
 }
 
-.theme-switcher__button.is-active {
-    background: var(--accent);
+#lang-switch .pill-switch__btn {
+    min-width: 44px;
+}
+
+.pill-switch__btn.is-active {
     color: var(--accent-contrast);
+}
+
+.pill-switch__btn:not(.is-active):hover {
+    color: var(--accent-strong);
 }
 
 .masthead {
@@ -461,11 +486,6 @@ h3 {
 }
 
 @media (max-width: 720px) {
-    body::before {
-        inset: 10px;
-        border-radius: 20px;
-    }
-
     .page-shell {
         padding: 20px 14px 48px;
     }
@@ -475,9 +495,20 @@ h3 {
         border-radius: 24px;
     }
 
-    .theme-toolbar {
+    .controls-bar {
         justify-content: space-between;
-        padding: 12px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .pill-switch {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .pill-switch__btn {
+        flex: 1;
+        text-align: center;
     }
 
     h1 {
@@ -495,14 +526,6 @@ h3 {
     .focus-list span {
         width: 100%;
         text-align: center;
-    }
-
-    .theme-switcher {
-        width: 100%;
-    }
-
-    .theme-switcher__button {
-        flex: 1;
     }
 }
 
@@ -528,7 +551,7 @@ h3 {
         break-inside: avoid;
     }
 
-    .theme-toolbar {
+    .controls-bar {
         display: none;
     }
 }
