@@ -21,10 +21,7 @@
         'page.title': 'Alexander Ozhereliev | Fullstack & AI Engineer',
         'page.desc': 'Alexander Ozhereliev — Fullstack & AI Engineer. Python, FastAPI, React, TypeScript, LLM, RAG, ML/DL. Personal projects and custom software development.',
         'skip': 'Skip to work experience',
-        'theme.label': 'Color theme',
         'lang.label': 'Resume language',
-        'ctrl.light': 'Light',
-        'ctrl.dark': 'Dark',
         'ctrl.ru': 'RU',
         'ctrl.print': 'Print / PDF',
         'name': 'Alexander Ozhereliev',
@@ -77,9 +74,6 @@
         'proj4.desc': 'A VK gamification platform. Users complete tasks, earn points, gain levels, and unlock achievements. A referral system lets them invite new participants, and the reward store lets them exchange points for prizes.',
         'proj4.li1': 'Lead development of the VK callback server and admin panel. Project contributors use the panel to manage content and award prizes.',
         'proj4.li2': 'Connect VK event processing to balance updates and transaction history. Develop business logic and administrative tools.',
-        'projects.additional': 'Additional Projects',
-        'proj5.desc': 'An integration service that receives webhooks from Tilda and queues jobs in PostgreSQL. A background process transfers files to Nextcloud through WebDAV. Configure retries for failed transfers and deduplication.',
-        'proj6.desc': 'A video-based queue monitoring service that detects and tracks people, measures zone occupancy, and sends Telegram notifications.',
         'services.title': 'Custom Software Development',
         'services.backend': 'Build web applications: backends, frontends, APIs, databases, and admin interfaces. Connect user workflows to server-side logic.',
         'services.integrations': 'Integrate external APIs, build bots, and automate data exchange. Use background processes for long-running tasks.',
@@ -108,7 +102,6 @@
     };
 
     const translations = { ru, en };
-    const themeSwitch = document.getElementById('theme-switch');
     const langSwitch = document.getElementById('lang-switch');
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const printPreference = window.matchMedia('print');
@@ -233,13 +226,6 @@
         if (!cipherFrame) cipherFrame = requestAnimationFrame(updateCipher);
     }
 
-    function applyTheme(theme) {
-        finishCipher();
-        document.documentElement.dataset.theme = theme;
-        document.body.dataset.theme = theme;
-        selectButton(themeSwitch, theme);
-    }
-
     function applyLang(lang) {
         if (currentLanguage === lang) return;
         finishCipher();
@@ -258,16 +244,9 @@
         document.title = dict['page.title'];
         metaDescription.content = dict['page.desc'];
         selectButton(langSwitch, lang);
-        updateSwitch(themeSwitch);
         currentLanguage = lang;
     }
 
-    themeSwitch.querySelectorAll('button').forEach(button => {
-        button.addEventListener('click', () => {
-            applyTheme(button.dataset.value);
-            savePreference('resume-theme', button.dataset.value);
-        });
-    });
     langSwitch.querySelectorAll('button').forEach(button => {
         button.addEventListener('click', () => {
             applyLang(button.dataset.value);
@@ -287,15 +266,12 @@
     });
     window.addEventListener('resize', () => {
         finishCipher();
-        updateSwitch(themeSwitch);
         updateSwitch(langSwitch);
     });
     document.addEventListener('visibilitychange', () => {
         if (document.hidden) finishCipher();
     });
 
-    applyTheme(readPreference('resume-theme') === 'paper' ? 'paper' : 'graphite');
     applyLang(readPreference('resume-lang') === 'en' ? 'en' : 'ru');
     animateText(cipherTarget);
-    requestAnimationFrame(() => document.documentElement.classList.add('is-theme-ready'));
 })();

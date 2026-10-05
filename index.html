@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="graphite">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Александр Ожерельев — Fullstack & AI Engineer. Python, FastAPI, React, TypeScript, LLM, RAG, ML/DL. Собственные проекты и разработка на заказ.">
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="dark">
     <title>Александр Ожерельев | Fullstack & AI Engineer</title>
-    <script>
-        try {
-            document.documentElement.dataset.theme = localStorage.getItem('resume-theme') === 'paper' ? 'paper' : 'graphite';
-        } catch { /* The default dark theme also works without storage. */ }
-    </script>
     <link rel="stylesheet" href="styles.css">
     <script src="resume.js" defer></script>
 </head>
-<body data-theme="graphite" data-lang="ru">
+<body data-lang="ru">
     <a class="skip-link" href="#experience" data-i18n="skip">Перейти к опыту работы</a>
     <div class="page-shell">
         <div class="controls-bar">
             <div class="controls-bar__actions">
-                <div class="pill-switch" id="theme-switch" role="group" aria-label="Цветовая тема" data-i18n-aria="theme.label">
-                    <button class="pill-switch__btn" type="button" data-value="paper" aria-pressed="false" data-i18n="ctrl.light">Светлая</button>
-                    <button class="pill-switch__btn is-active" type="button" data-value="graphite" aria-pressed="true" data-i18n="ctrl.dark">Тёмная</button>
-                </div>
                 <div class="pill-switch" id="lang-switch" role="group" aria-label="Язык резюме" data-i18n-aria="lang.label">
                     <button class="pill-switch__btn is-active" type="button" data-value="ru" aria-pressed="true" data-i18n="ctrl.ru">РУ</button>
                     <button class="pill-switch__btn" type="button" data-value="en" aria-pressed="false">EN</button>
@@ -45,13 +36,13 @@
             </div>
             <div class="masthead__aside">
                 <div class="contact-identity">
-                    <figure class="portrait"><img src="portrait-cropped.png" alt="Александр Ожерельев" data-i18n-alt="name" width="120" height="144"></figure>
+                    <figure class="portrait"><img src="portrait-cropped.png" alt="Александр Ожерельев" data-i18n-alt="name" width="240" height="288"></figure>
                     <div><p class="contact-city" data-i18n="city">Курган</p><p class="contact-format" data-i18n="work.format">Удалённая работа</p></div>
                 </div>
                 <section class="contact-card" aria-labelledby="contacts-title">
                     <h2 id="contacts-title" class="sr-only" data-i18n="contacts.title">Контакты</h2>
                     <ul class="contact-list">
-                        <li><span class="contact-label">Email</span><a href="mailto:akirakawashikz@gmail.com">akirakawashikz@gmail.com</a></li>
+                        <li><span class="contact-label">Email</span><a href="mailto:akirakawashi@yandex.ru">akirakawashi@yandex.ru</a></li>
                         <li><span class="contact-label" data-i18n="contact.phone">Телефон</span><a href="tel:+79995491000">+7 999 549-10-00</a></li>
                         <li><span class="contact-label">Telegram</span><a href="https://t.me/akirakawashi" target="_blank" rel="noreferrer">@akirakawashi</a></li>
                         <li><span class="contact-label">GitHub</span><a href="https://github.com/akirakawashi" target="_blank" rel="noreferrer">akirakawashi</a></li>
@@ -137,11 +128,6 @@
                             </ul>
                             <p class="stack">Python · FastAPI · PostgreSQL · SQLModel · VK API · React</p>
                         </article>
-                    </div>
-                    <div class="additional-projects">
-                        <h3 data-i18n="projects.additional">Дополнительные проекты</h3>
-                        <p><strong>Tilda → Nextcloud.</strong> <span data-i18n="proj5.desc">Интеграционный сервис принимает webhook от Tilda и ставит задания в очередь PostgreSQL. Фоновый процесс передаёт файлы в Nextcloud через WebDAV. Настраиваю повторные попытки при сбоях и защиту от дубликатов.</span></p>
-                        <p><strong>AI Shop.</strong> <span data-i18n="proj6.desc">Сервис контролирует очередь по видеопотоку: выполняет детекцию людей и трекинг, отслеживает заполненность зоны и отправляет уведомления в Telegram.</span></p>
                     </div>
                 </section>
 
