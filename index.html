@@ -1,88 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="graphite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Резюме Александра Ожерельева, Backend Developer / Python Engineer.">
-    <title>Александр Ожерельев | Backend Developer / Python Engineer</title>
+    <meta name="description" content="Александр Ожерельев — Fullstack & AI Engineer. Python, FastAPI, React, TypeScript, LLM, RAG, ML/DL. Собственные проекты и разработка на заказ.">
+    <meta name="color-scheme" content="dark light">
+    <title>Александр Ожерельев | Fullstack & AI Engineer</title>
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem('resume-theme') === 'paper' ? 'paper' : 'graphite';
+        } catch { /* The default dark theme also works without storage. */ }
+    </script>
     <link rel="stylesheet" href="styles.css">
+    <script src="resume.js" defer></script>
 </head>
-<body data-theme="paper" data-lang="ru">
+<body data-theme="graphite" data-lang="ru">
+    <a class="skip-link" href="#experience" data-i18n="skip">Перейти к опыту работы</a>
     <div class="page-shell">
-        <div class="controls-bar panel">
-            <div class="pill-switch" id="theme-switch">
-                <span class="pill-switch__track"></span>
-                <button class="pill-switch__btn" type="button" data-value="paper" data-i18n="ctrl.light">Светлая</button>
-                <button class="pill-switch__btn" type="button" data-value="graphite" data-i18n="ctrl.dark">Тёмная</button>
-            </div>
-            <div class="pill-switch" id="lang-switch">
-                <span class="pill-switch__track"></span>
-                <button class="pill-switch__btn" type="button" data-value="ru">РУ</button>
-                <button class="pill-switch__btn" type="button" data-value="en">EN</button>
+        <div class="controls-bar">
+            <div class="controls-bar__actions">
+                <div class="pill-switch" id="theme-switch" role="group" aria-label="Цветовая тема" data-i18n-aria="theme.label">
+                    <button class="pill-switch__btn" type="button" data-value="paper" aria-pressed="false" data-i18n="ctrl.light">Светлая</button>
+                    <button class="pill-switch__btn is-active" type="button" data-value="graphite" aria-pressed="true" data-i18n="ctrl.dark">Тёмная</button>
+                </div>
+                <div class="pill-switch" id="lang-switch" role="group" aria-label="Язык резюме" data-i18n-aria="lang.label">
+                    <button class="pill-switch__btn is-active" type="button" data-value="ru" aria-pressed="true" data-i18n="ctrl.ru">РУ</button>
+                    <button class="pill-switch__btn" type="button" data-value="en" aria-pressed="false">EN</button>
+                </div>
+                <button class="print-button" id="print-button" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/><path d="M16 11h1"/></svg>
+                    <span data-i18n="ctrl.print">Печать / PDF</span>
+                </button>
             </div>
         </div>
 
-        <header class="masthead panel">
+        <article class="resume-document" aria-labelledby="resume-name">
+        <header class="masthead">
             <div class="masthead__copy">
-                <p class="eyebrow">Backend Developer / Python Engineer</p>
-                <h1 data-i18n="name">Александр Ожерельев</h1>
-                <p class="lead" data-i18n="lead1">
-                    Backend-разработчик с коммерческим опытом разработки сервисов на Python и FastAPI,
-                    проектирования SQL- и PL/SQL-логики, интеграции распределенных систем и сопровождения
-                    production-инфраструктуры.
-                </p>
-                <p class="lead lead--secondary" data-i18n="lead2">
-                    Закрываю полный цикл разработки: от модели данных, бизнес-логики и API до CI/CD,
-                    деплоя, мониторинга и поддержки рабочих сред. Дополнительно развиваюсь в AI/ML-направлении:
-                    LLM-интеграции, Speech-to-Text и обработка данных.
-                </p>
-
-                <div class="focus-list" aria-label="Ключевые фокусы">
-                    <span>Python / FastAPI</span>
-                    <span>SQL / PL/SQL</span>
-                    <span>PostgreSQL / Oracle</span>
-                    <span>Kafka / RabbitMQ</span>
-                    <span>Docker / CI/CD</span>
-                    <span>AI / ML Integration</span>
-                </div>
+                <p class="eyebrow">Fullstack &amp; AI Engineer</p>
+                <h1 id="resume-name" data-i18n="name">Александр Ожерельев</h1>
+                <p class="lead" data-i18n="lead1">Разрабатываю веб-приложения: backend на Python/FastAPI и frontend на React/TypeScript. Проектирую API и модели данных, связываю интерфейсы с серверной логикой и сопровождаю развёртывание сервисов.</p>
+                <p class="lead" data-i18n="lead.ai">Работаю с LLM и RAG, готовлю данные и обучаю ML/DL-модели. Интегрирую AI в сервисы для поиска по данным, анализа видео и обработки речи.</p>
+                <p class="lead lead--secondary" data-i18n="lead2">Помимо основной работы веду собственные проекты и беру разработку на заказ. Пишу код, определяю архитектуру и координирую участников. После запуска продолжаю развивать и сопровождать сервисы.</p>
             </div>
-
             <div class="masthead__aside">
-                <figure class="portrait">
-                    <img src="myphoto.jpg" alt="Александр Ожерельев">
-                </figure>
-
+                <div class="contact-identity">
+                    <figure class="portrait"><img src="myphoto.jpg" alt="Александр Ожерельев" data-i18n-alt="name" width="120" height="144"></figure>
+                    <div><p class="contact-city" data-i18n="city">Курган</p><p class="contact-format" data-i18n="work.format">Удалённая работа</p></div>
+                </div>
                 <section class="contact-card" aria-labelledby="contacts-title">
-                    <h2 id="contacts-title" data-i18n="contacts.title">Контакты</h2>
+                    <h2 id="contacts-title" class="sr-only" data-i18n="contacts.title">Контакты</h2>
                     <ul class="contact-list">
-                        <li>
-                            <span class="contact-label" data-i18n="contact.location">Локация</span>
-                            <span data-i18n="city">Курган</span>
-                        </li>
-                        <li>
-                            <span class="contact-label">Email</span>
-                            <a href="mailto:akirakawashikz@gmail.com">akirakawashikz@gmail.com</a>
-                        </li>
-                        <li>
-                            <span class="contact-label" data-i18n="contact.phone">Телефон</span>
-                            <a href="tel:+79995491000">+7 999 549-10-00</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">Telegram</span>
-                            <a href="https://t.me/akirakawashi" target="_blank" rel="noreferrer">@akirakawashi</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">Website</span>
-                            <a href="https://ainocraft.com" target="_blank" rel="noreferrer">ainocraft.com</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">Portfolio</span>
-                            <a href="https://akirakawashi.github.io/my-profile/" target="_blank" rel="noreferrer">akirakawashi.github.io/my-profile/</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">GitHub</span>
-                            <a href="https://github.com/akirakawashi" target="_blank" rel="noreferrer">github.com/akirakawashi</a>
-                        </li>
+                        <li><span class="contact-label">Email</span><a href="mailto:akirakawashikz@gmail.com">akirakawashikz@gmail.com</a></li>
+                        <li><span class="contact-label" data-i18n="contact.phone">Телефон</span><a href="tel:+79995491000">+7 999 549-10-00</a></li>
+                        <li><span class="contact-label">Telegram</span><a href="https://t.me/akirakawashi" target="_blank" rel="noreferrer">@akirakawashi</a></li>
+                        <li><span class="contact-label">GitHub</span><a href="https://github.com/akirakawashi" target="_blank" rel="noreferrer">akirakawashi</a></li>
+                        <li><span class="contact-label" data-i18n="contact.project">Проект</span><a href="https://ainocraft.com" target="_blank" rel="noreferrer">ainocraft.com</a></li>
+                        <li><span class="contact-label" data-i18n="contact.studio">Студия</span><a href="https://akirakawashi.github.io/startup/" target="_blank" rel="noreferrer">VoidLabs</a></li>
                     </ul>
                 </section>
             </div>
@@ -90,445 +64,122 @@
 
         <main class="resume-layout">
             <div class="resume-main">
-                <section class="panel">
-                    <div class="section-heading">
-                        <p class="section-kicker" data-i18n="sec.profile.kicker">Профиль</p>
-                        <h2 data-i18n="sec.profile.title">Профессиональное позиционирование</h2>
-                    </div>
-
-                    <p data-i18n="profile.p1">
-                        Основной фокус: backend-архитектура, разработка API, работа с данными и надежные
-                        production-окружения. Комфортно чувствую себя в среде, где нужно одновременно мыслить
-                        как разработчик, интегратор и инженер сопровождения.
-                    </p>
-                    <p data-i18n="profile.p2">
-                        Параллельно развиваю собственный продукт AiNoCraft: микросервисную платформу с backend,
-                        frontend, desktop launcher-клиентом и DevOps-инфраструктурой. Это усиливает мой практический
-                        опыт в проектировании систем с нуля и доведении их до рабочего production-состояния.
-                    </p>
-
-                    <div class="metric-grid">
-                        <article class="metric">
-                            <span class="metric__label" data-i18n="metric.strength.label">Сильная сторона</span>
-                            <strong data-i18n="metric.strength.value">Полный цикл backend-разработки: данные, API, интеграции и инфраструктура</strong>
+                <section class="resume-section" id="experience" aria-labelledby="experience-title">
+                    <div class="section-heading"><h2 id="experience-title" data-i18n="sec.exp.title">Опыт работы</h2></div>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <div class="timeline-item__head"><div><h3 data-i18n="job1.title">Ведущий инженер серверной разработки Python</h3><p class="company" data-i18n="job1.company">АйСи Эйт</p></div><p class="period" data-i18n="job1.period">Февраль 2024 — настоящее время</p></div>
+                            <ul class="detail-list">
+                                <li data-i18n="job1.li1">Разрабатываю и сопровождаю backend-сервисы на Python и FastAPI: реализую серверную логику корпоративных систем и обработку данных.</li>
+                                <li data-i18n="job1.li2">Проектирую API и модели данных, реализую бизнес-логику и интеграции с внешними системами. В работе использую PostgreSQL, Redis и Kafka.</li>
+                                <li data-i18n="job1.li3">В корпоративной WMS-системе разрабатываю SQL- и PL/SQL-логику: схемы данных, пакеты, процедуры и функции. Оптимизирую запросы и индексы, сопровождаю изменения в базе.</li>
+                                <li data-i18n="job1.li4">Автоматизирую отчётность и участвую в ETL-процессах обработки и переноса данных.</li>
+                                <li data-i18n="job1.li5">Автоматизирую тестирование и CI/CD. Сопровождаю рабочие окружения и разбираю проблемы, которые возникают при эксплуатации сервисов.</li>
+                            </ul>
                         </article>
-                        <article class="metric">
-                            <span class="metric__label" data-i18n="metric.scope.label">Проектный контур</span>
-                            <strong data-i18n="metric.scope.value">Корпоративные сервисы, AI/ML-пайплайны, внутренние платформы и pet-product</strong>
+                        <article class="timeline-item">
+                            <div class="timeline-item__head"><div><h3>Python / AI Developer</h3><p class="company" data-i18n="job4.company">Фриланс</p></div><p class="period" data-i18n="job4.period">Январь 2025 — март 2025</p></div>
+                            <ul class="detail-list">
+                                <li data-i18n="job4.li1">Разрабатывал AI-пайплайны для обработки речи: распознавание, извлечение сущностей и преобразование результатов в структурированные данные.</li>
+                                <li data-i18n="job4.li2">Работал с Whisper, Hugging Face Transformers и PyTorch. Настраивал постобработку и валидацию результатов, чтобы их можно было использовать в сервисах.</li>
+                            </ul>
                         </article>
-                        <article class="metric">
-                            <span class="metric__label" data-i18n="metric.format.label">Формат работы</span>
-                            <strong data-i18n="metric.format.value">Удаленная работа, самостоятельное ведение задач, взаимодействие с командами и заказчиками</strong>
+                        <article class="timeline-item">
+                            <div class="timeline-item__head"><div><h3 data-i18n="job5.title">Системный администратор</h3><p class="company" data-i18n="job5.company">КонсультантПлюс</p></div><p class="period" data-i18n="job5.period">Октябрь 2022 — февраль 2024</p></div>
+                            <ul class="detail-list">
+                                <li data-i18n="job5.li1">Поддерживал серверы и сетевую инфраструктуру на Linux и Windows Server. Работал с VLAN, DHCP, DNS, маршрутизацией и firewall.</li>
+                                <li data-i18n="job5.li2">Настраивал резервное копирование и мониторинг. Участвовал в ETL-миграции и синхронизации данных из CRM.</li>
+                            </ul>
                         </article>
                     </div>
                 </section>
 
-                <section class="panel">
-                <div class="section-heading">
-                    <p class="section-kicker" data-i18n="sec.exp.kicker">Опыт</p>
-                    <h2 data-i18n="sec.exp.title">Опыт работы</h2>
-                </div>
-
-                <div class="timeline">
-                    <article class="timeline-item">
-                        <div class="timeline-item__head">
-                            <div>
-                                <h3 data-i18n="job1.title">Ведущий инженер серверной разработки Python</h3>
-                                <p class="company" data-i18n="job1.company">АйСи Эйт</p>
-                            </div>
-                            <p class="period" data-i18n="job1.period">Февраль 2026 — настоящее время</p>
-                        </div>
-                        <ul class="detail-list">
-                            <li data-i18n="job1.li1">Разрабатываю и поддерживаю backend-сервисы на Python и FastAPI для корпоративных систем и интеграционных сценариев.</li>
-                            <li data-i18n="job1.li2">Проектирую бизнес-логику, API и модели данных, работаю с PostgreSQL, Redis и Kafka.</li>
-                            <li data-i18n="job1.li3">Повышаю отказоустойчивость backend-части, участвую в настройке CI/CD и production-окружений.</li>
-                        </ul>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-item__head">
-                            <div>
-                                <h3 data-i18n="job2.title">SQL Developer / Специалист поддержки ППО</h3>
-                                <p class="company" data-i18n="job2.company">АйСи Эйт</p>
-                            </div>
-                            <p class="period" data-i18n="job2.period">Февраль 2024 — Февраль 2026</p>
-                        </div>
-                        <ul class="detail-list">
-                            <li data-i18n="job2.li1">Разрабатывал и сопровождал SQL- и PL/SQL-логику для корпоративной WMS-системы.</li>
-                            <li data-i18n="job2.li2">Проектировал схемы данных, писал пакеты, процедуры, функции и оптимизировал критичные запросы и индексы.</li>
-                            <li data-i18n="job2.li3">Автоматизировал отчетность, участвовал в ETL-процессах и вырос от поддержки до роли SQL-разработчика.</li>
-                        </ul>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-item__head">
-                            <div>
-                                <h3 data-i18n="job3.title">Автор и Fullstack Developer</h3>
-                                <p class="company" data-i18n="job3.company">AiNoCraft</p>
-                            </div>
-                            <p class="period" data-i18n="job3.period">Январь 2026 — настоящее время</p>
-                        </div>
-                        <ul class="detail-list">
-                            <li data-i18n="job3.li1">Развиваю собственный production-проект: Minecraft-сервер с микросервисной платформой, веб-порталом и launcher-клиентом.</li>
-                            <li data-i18n="job3.li2">Реализовал backend на FastAPI, JWT-авторизацию с access/refresh-токенами, React SPA и production-инфраструктуру на VPS.</li>
-                            <li data-i18n="job3.li3">Построил dockerized dev/prod-окружения, CI/CD-пайплайн, систему резервного копирования и мониторинга через Telegram-бота.</li>
-                        </ul>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-item__head">
-                            <div>
-                                <h3 data-i18n="job4.title">Python / AI Developer</h3>
-                                <p class="company" data-i18n="job4.company">Фриланс</p>
-                            </div>
-                            <p class="period" data-i18n="job4.period">Январь 2025 — Март 2025</p>
-                        </div>
-                        <ul class="detail-list">
-                            <li data-i18n="job4.li1">Собирал AI-пайплайны для практических задач: Speech-to-Text, извлечение сущностей и структурирование данных.</li>
-                            <li data-i18n="job4.li2">Использовал OpenAI Whisper, Hugging Face Transformers и PyTorch для решений под конкретные бизнес-сценарии.</li>
-                            <li data-i18n="job4.li3">Настраивал очистку, постобработку и валидацию результатов, чтобы получать пригодный для интеграции выходной формат.</li>
-                        </ul>
-                    </article>
-
-                    <article class="timeline-item">
-                        <div class="timeline-item__head">
-                            <div>
-                                <h3 data-i18n="job5.title">Системный администратор</h3>
-                                <p class="company" data-i18n="job5.company">КонсультантПлюс</p>
-                            </div>
-                            <p class="period" data-i18n="job5.period">Октябрь 2022 — Февраль 2024</p>
-                        </div>
-                        <ul class="detail-list">
-                            <li data-i18n="job5.li1">Поддерживал и развивал серверную и сетевую инфраструктуру, работал с Linux, Windows Server и сетевыми сервисами.</li>
-                            <li data-i18n="job5.li2">Настраивал VLAN, DHCP, DNS, маршрутизацию, firewall, резервное копирование и мониторинг.</li>
-                            <li data-i18n="job5.li3">Получил первый опыт в инженерии данных через ETL-миграцию и синхронизацию данных из CRM.</li>
-                        </ul>
-                    </article>
-                </div>
-                </section>
-
-                <section class="panel">
-                <div class="section-heading">
-                    <p class="section-kicker" data-i18n="sec.proj.kicker">Кейсы</p>
-                    <h2 data-i18n="sec.proj.title">Избранные проекты</h2>
-                </div>
-
-                <div class="project-list">
-                    <article class="project-card">
-                        <h3>AiNoCraft</h3>
-                        <p data-i18n="proj1.desc">
-                            Авторский проект: микросервисная платформа для Minecraft-сервера с backend,
-                            веб-порталом, launcher-клиентом и production-инфраструктурой. В проекте реализованы
-                            FastAPI backend, JWT-аутентификация, React SPA, Docker-окружения и CI/CD-процессы.
-                        </p>
-                        <p class="stack">Python, FastAPI, PostgreSQL, Redis, MinIO, React, Docker, Nginx, CI/CD</p>
-                    </article>
-
-                </div>
-                </section>
-
-                <section class="panel">
-                <div class="section-heading">
-                    <p class="section-kicker" data-i18n="sec.edu.kicker">Образование</p>
-                    <h2 data-i18n="sec.edu.title">Образование и дополнительная информация</h2>
-                </div>
-
-                <div class="education-block">
-                    <div>
-                        <h3 data-i18n="edu.university">Курганский государственный университет</h3>
-                        <p data-i18n="edu.degree">Высшее образование, факультет транспортных систем</p>
-                        <p class="small-note" data-i18n="edu.note">Специальность: высоковольтная электроэнергетика и электротехника, 2020</p>
+                <section class="resume-section" id="projects" aria-labelledby="projects-title">
+                    <div class="section-heading"><h2 id="projects-title" data-i18n="sec.proj.title">Собственные проекты</h2></div>
+                    <p class="section-intro" data-i18n="projects.intro">Я автор этих проектов и веду их разработку. Определяю архитектуру, пишу код и координирую участников. Отвечаю за взаимодействие компонентов и дальнейшее развитие систем.</p>
+                    <div class="project-list">
+                        <article class="project-card">
+                            <div class="project-card__head"><h3>AiNoCraft</h3><span class="project-type" data-i18n="proj1.type">Игровая платформа</span></div>
+                            <p class="project-role"><span data-i18n="job3.title">Автор проекта / Fullstack Developer</span><span data-i18n="job3.period">Январь 2026 — настоящее время</span></p>
+                            <p data-i18n="proj1.desc">Minecraft-проект, в котором веб-портал и административная панель связаны с desktop-лаунчером, игровым сервером и собственными модами.</p>
+                            <ul class="detail-list">
+                                <li data-i18n="proj1.li1">Проектирую авторизацию, управление пользователями и ролями, магазин и API лаунчера. Согласую взаимодействие сайта, лаунчера и серверных компонентов.</li>
+                                <li data-i18n="proj1.li2">Организую развёртывание сервисов в k3s через Helm и GitHub Actions. Настраиваю обновление клиентов и хранение файлов в S3-совместимом хранилище.</li>
+                            </ul>
+                            <p class="stack">Python · FastAPI · PostgreSQL · Redis · MinIO · React · k3s · Helm</p>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-card__head"><h3>AI Ad</h3><span class="project-type" data-i18n="proj2.type">Видеоаналитика / Computer Vision</span></div>
+                            <p data-i18n="proj2.desc">Система оценивает видимость наружной рекламы по видео. Обнаруживает рекламные конструкции, выполняет трекинг, классифицирует бренды и рассчитывает метрики по маршруту.</p>
+                            <ul class="detail-list">
+                                <li data-i18n="proj2.li1">Веду разработку backend, ML-пайплайна и веб-интерфейса. Согласую API обработки видео и форматы результатов между вычислительной частью и интерфейсом.</li>
+                                <li data-i18n="proj2.li2">Разделяю API и вычислительные воркеры, организую очередь задач и передачу видео через MinIO. Связываю результаты обработки с картой и отчётами в веб-интерфейсе.</li>
+                                <li data-i18n="proj2.li3">Проверяю разметку и распознавание брендов с помощью Qwen3-VL, которую запускаю через llama.cpp.</li>
+                            </ul>
+                            <p class="stack">Python · FastAPI · PostgreSQL · MinIO · YOLO · PyTorch · Qwen3-VL · React</p>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-card__head"><h3>Ridebook</h3><span class="project-type" data-i18n="proj3.type">Сервис бронирования</span></div>
+                            <p data-i18n="proj3.desc">Сервис бронирования междугородних поездок. Пассажиры выбирают поездку на сайте, а диспетчеры управляют маршрутами, рейсами и бронями в отдельном интерфейсе.</p>
+                            <ul class="detail-list">
+                                <li data-i18n="proj3.li1">Проектирую backend и интерфейсы. Учитываю места по сегментам маршрута, рассчитываю тарифы между остановками и описываю жизненный цикл брони.</li>
+                                <li data-i18n="proj3.li2">Обеспечиваю идемпотентность бронирования: повторный запрос не создаёт вторую бронь. Предотвращаю конкурентную продажу мест — параллельные запросы не должны продавать одно место дважды.</li>
+                                <li data-i18n="proj3.li3">Развиваю подтверждение телефона и интеграцию СМС-провайдера.</li>
+                            </ul>
+                            <p class="stack">Python · FastAPI · PostgreSQL · Redis · SQLAlchemy · React · Docker</p>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-card__head"><h3>Volnateca</h3><span class="project-type" data-i18n="proj4.type">Геймификация / VK-бот</span></div>
+                            <p data-i18n="proj4.desc">Платформа геймификации во ВКонтакте. Пользователи выполняют задания, получают баллы, повышают уровни и открывают достижения. Реферальная механика позволяет приглашать новых участников, а магазин призов — обменивать баллы на награды.</p>
+                            <ul class="detail-list">
+                                <li data-i18n="proj4.li1">Веду разработку callback-сервера VK и административной панели. Через неё участники проекта управляют контентом и выдачей призов.</li>
+                                <li data-i18n="proj4.li2">Связываю обработку событий VK с изменением баланса и журналом операций. Развиваю бизнес-логику и инструменты администрирования.</li>
+                            </ul>
+                            <p class="stack">Python · FastAPI · PostgreSQL · SQLModel · VK API · React</p>
+                        </article>
                     </div>
+                    <div class="additional-projects">
+                        <h3 data-i18n="projects.additional">Дополнительные проекты</h3>
+                        <p><strong>Tilda → Nextcloud.</strong> <span data-i18n="proj5.desc">Интеграционный сервис принимает webhook от Tilda и ставит задания в очередь PostgreSQL. Фоновый процесс передаёт файлы в Nextcloud через WebDAV. Настраиваю повторные попытки при сбоях и защиту от дубликатов.</span></p>
+                        <p><strong>AI Shop.</strong> <span data-i18n="proj6.desc">Сервис контролирует очередь по видеопотоку: выполняет детекцию людей и трекинг, отслеживает заполненность зоны и отправляет уведомления в Telegram.</span></p>
+                    </div>
+                </section>
 
-                    <ul class="detail-list detail-list--compact">
-                        <li data-i18n="edu.li1">Английский язык: B1.</li>
-                        <li data-i18n="edu.li2">Готов к удаленной работе и командировкам.</li>
-                        <li data-i18n="edu.li3">Водительские права: категория B.</li>
+                <section class="resume-section" id="services" aria-labelledby="services-title">
+                    <div class="section-heading"><h2 id="services-title" data-i18n="services.title">Разработка на заказ</h2></div>
+                    <ul class="service-list">
+                        <li data-i18n="services.backend">Разрабатываю веб-приложения: backend, frontend, API, базы данных и административные интерфейсы. Связываю пользовательские сценарии с серверной логикой.</li>
+                        <li data-i18n="services.integrations">Подключаю внешние API, разрабатываю ботов и автоматизирую обмен данными. Для длительных задач использую фоновые процессы.</li>
+                        <li data-i18n="services.ai">Интегрирую LLM и RAG в AI-сервисы, разрабатываю ML/DL-пайплайны для обработки видео и речи.</li>
                     </ul>
-                </div>
+                </section>
+
+                <section class="resume-section" aria-labelledby="education-title">
+                    <div class="section-heading"><h2 id="education-title" data-i18n="sec.edu.title">Образование и условия работы</h2></div>
+                    <div class="education-block">
+                        <div><h3 data-i18n="edu.university">Курганский государственный университет</h3><p data-i18n="edu.degree">Высшее образование, факультет транспортных систем</p><p class="small-note" data-i18n="edu.note">Высоковольтная электроэнергетика и электротехника · 2020</p></div>
+                        <ul class="detail-list detail-list--compact"><li data-i18n="edu.li1">Английский язык — B1.</li><li data-i18n="edu.li2">Работаю удалённо. Готов к командировкам.</li><li data-i18n="edu.li3">Водительские права категории B.</li></ul>
+                    </div>
                 </section>
             </div>
 
-            <aside class="resume-sidebar">
-                <section class="panel panel--sticky">
-                    <div class="section-heading">
-                        <p class="section-kicker" data-i18n="sec.skills.kicker">Компетенции</p>
-                        <h2 data-i18n="sec.skills.title">Ключевые навыки</h2>
-                    </div>
-
+            <aside class="resume-sidebar" id="skills" aria-labelledby="skills-title">
+                <section class="skills-section">
+                    <div class="section-heading"><h2 id="skills-title" data-i18n="sec.skills.title">Навыки</h2></div>
                     <div class="skill-stack">
-                        <article class="skill-group">
-                            <h3 data-i18n="skill.backend.title">Backend и API</h3>
-                            <p>Python, FastAPI, REST API, Pydantic, SQLAlchemy, JWT Authentication, session management, asynchronous processing, worker processes, OOP.</p>
-                        </article>
-                        <article class="skill-group">
-                            <h3 data-i18n="skill.data.title">Data и базы данных</h3>
-                            <p>PostgreSQL, Oracle, SQL, PL/SQL, Redis, MinIO, ETL pipelines, schema design, query optimization, reporting systems, data validation.</p>
-                        </article>
-                        <article class="skill-group">
-                            <h3 data-i18n="skill.integrations.title">Интеграции и messaging</h3>
-                            <p data-i18n="skill.integrations.desc">Apache Kafka, RabbitMQ, SOAP, Webhooks, WebDAV, Nextcloud API, Tilda API, внешние API и сервисные integration layers.</p>
-                        </article>
-                        <article class="skill-group">
-                            <h3 data-i18n="skill.devops.title">Infrastructure и DevOps</h3>
-                            <p>Docker, Docker Compose, Nginx, CI/CD, GitHub Actions, Linux / Ubuntu, production deployment, monitoring, backups, reverse proxy.</p>
-                        </article>
-                        <article class="skill-group">
-                            <h3>AI / ML</h3>
-                            <p>LLM integrations, Hugging Face Transformers, OpenAI Whisper, PyTorch, TensorFlow / Keras, scikit-learn, recommendation systems.</p>
-                        </article>
-                        <article class="skill-group">
-                            <h3 data-i18n="skill.extra.title">Дополнительно</h3>
-                            <p>React, Vite, JavaScript, PyQt5, PyInstaller, PyWebView, Poetry, PDM, Ruff, Git, Linux / Windows administration, networking.</p>
-                        </article>
+                        <article class="skill-group"><h3 data-i18n="skill.backend.title">Backend и архитектура</h3><p>Python, FastAPI, REST API, asyncio, Pydantic, SQLAlchemy / SQLModel, Alembic, Dishka.</p><p class="skill-detail" data-i18n="skill.backend.desc">Проектирую слоистую архитектуру и контракты API. Выношу длительные задачи в фоновые воркеры, учитываю идемпотентность операций.</p></article>
+                        <article class="skill-group"><h3>Frontend</h3><p>React, TypeScript, JavaScript, HTML, CSS, Vite.</p><p class="skill-detail" data-i18n="skill.frontend.desc">Разрабатываю веб-интерфейсы, личные кабинеты и административные панели. Связываю их с API и серверными правилами доступа.</p></article>
+                        <article class="skill-group"><h3>LLM / RAG</h3><p>LLM, RAG, VLM, Qwen3-VL, llama.cpp.</p><p class="skill-detail" data-i18n="skill.llm.desc">Работаю с контекстом и поиском по данным, интегрирую языковые и мультимодальные модели в сервисы. Использую AI-инструменты для разработки.</p></article>
+                        <article class="skill-group"><h3>ML / DL</h3><p>PyTorch, YOLO, OpenCV, Hugging Face, Whisper, TensorFlow / Keras, XGBoost.</p><p class="skill-detail" data-i18n="skill.ai.desc">Готовлю данные и обучаю модели. Работаю с видеоаналитикой, детекцией и трекингом, обработкой речи.</p></article>
+                        <article class="skill-group"><h3 data-i18n="skill.data.title">Базы данных</h3><p>PostgreSQL, Oracle, SQL, PL/SQL, Redis, MinIO / S3.</p><p class="skill-detail" data-i18n="skill.data.desc">Проектирую модели данных и транзакции. Оптимизирую SQL-запросы и индексы, участвую в ETL-процессах.</p></article>
+                        <article class="skill-group"><h3 data-i18n="skill.integrations.title">Интеграции и безопасность</h3><p>Kafka, RabbitMQ, Webhooks, SOAP, WebDAV, JWT, Keycloak / OIDC.</p><p class="skill-detail" data-i18n="skill.integrations.desc">Настраиваю авторизацию, управление сессиями и доступом. Подключаю внешние API и организую обмен данными между сервисами.</p></article>
+                        <article class="skill-group"><h3 data-i18n="skill.devops.title">Инфраструктура и тестирование</h3><p>Docker, Docker Compose, Kubernetes / k3s, Helm, GitHub Actions, Linux, Nginx / Traefik, pytest, Testcontainers.</p><p class="skill-detail" data-i18n="skill.devops.desc">Настраиваю CI/CD, миграции и интеграционные тесты. Работаю с мониторингом и резервным копированием.</p></article>
+                        <article class="skill-group"><h3 data-i18n="skill.extra.title">Desktop и игровые системы</h3><p>Java / NeoForge, C# / .NET, pywebview.</p><p class="skill-detail" data-i18n="skill.extra.desc">Разрабатываю desktop-клиенты и лаунчеры, пишу игровые моды и связываю их с серверными сервисами.</p></article>
                     </div>
                 </section>
             </aside>
         </main>
+        </article>
     </div>
-
-    <script>
-        (function () {
-            const THEME_KEY = 'resume-theme';
-            const LANG_KEY  = 'resume-lang';
-            const root = document.body;
-            const html = document.documentElement;
-
-            /* ── Translations ─────────────────────────────────────────── */
-            const i18n = {
-                ru: {
-                    'name': 'Александр Ожерельев',
-                    'city': 'Курган',
-                    'page.title':   'Александр Ожерельев | Backend Developer / Python Engineer',
-                    'page.desc':    'Резюме Александра Ожерельева, Backend Developer / Python Engineer.',
-                    'ctrl.light':   'Светлая',
-                    'ctrl.dark':    'Тёмная',
-                    'lead1': 'Backend-разработчик с коммерческим опытом разработки сервисов на Python и FastAPI, проектирования SQL- и PL/SQL-логики, интеграции распределённых систем и сопровождения production-инфраструктуры.',
-                    'lead2': 'Закрываю полный цикл разработки: от модели данных, бизнес-логики и API до CI/CD, деплоя, мониторинга и поддержки рабочих сред. Дополнительно развиваюсь в AI/ML-направлении: LLM-интеграции, Speech-to-Text и обработка данных.',
-                    'contacts.title':       'Контакты',
-                    'contact.location':     'Локация',
-                    'contact.phone':        'Телефон',
-                    'sec.profile.kicker':   'Профиль',
-                    'sec.profile.title':    'Профессиональное позиционирование',
-                    'profile.p1': 'Основной фокус: backend-архитектура, разработка API, работа с данными и надёжные production-окружения. Комфортно чувствую себя в среде, где нужно одновременно мыслить как разработчик, интегратор и инженер сопровождения.',
-                    'profile.p2': 'Параллельно развиваю собственный продукт AiNoCraft: микросервисную платформу с backend, frontend, desktop launcher-клиентом и DevOps-инфраструктурой. Это усиливает мой практический опыт в проектировании систем с нуля и доведении их до рабочего production-состояния.',
-                    'metric.strength.label': 'Сильная сторона',
-                    'metric.strength.value': 'Полный цикл backend-разработки: данные, API, интеграции и инфраструктура',
-                    'metric.scope.label':    'Проектный контур',
-                    'metric.scope.value':    'Корпоративные сервисы, AI/ML-пайплайны, внутренние платформы и pet-product',
-                    'metric.format.label':   'Формат работы',
-                    'metric.format.value':   'Удалённая работа, самостоятельное ведение задач, взаимодействие с командами и заказчиками',
-                    'sec.exp.kicker':  'Опыт',
-                    'sec.exp.title':   'Опыт работы',
-                    'job1.title':   'Ведущий инженер серверной разработки Python',
-                    'job1.company': 'АйСи Эйт',
-                    'job1.period':  'Февраль 2026 — настоящее время',
-                    'job1.li1': 'Разрабатываю и поддерживаю backend-сервисы на Python и FastAPI для корпоративных систем и интеграционных сценариев.',
-                    'job1.li2': 'Проектирую бизнес-логику, API и модели данных, работаю с PostgreSQL, Redis и Kafka.',
-                    'job1.li3': 'Повышаю отказоустойчивость backend-части, участвую в настройке CI/CD и production-окружений.',
-                    'job2.title':   'SQL Developer / Специалист поддержки ППО',
-                    'job2.company': 'АйСи Эйт',
-                    'job2.period':  'Февраль 2024 — Февраль 2026',
-                    'job2.li1': 'Разрабатывал и сопровождал SQL- и PL/SQL-логику для корпоративной WMS-системы.',
-                    'job2.li2': 'Проектировал схемы данных, писал пакеты, процедуры, функции и оптимизировал критичные запросы и индексы.',
-                    'job2.li3': 'Автоматизировал отчётность, участвовал в ETL-процессах и вырос от поддержки до роли SQL-разработчика.',
-                    'job3.title':   'Автор и Fullstack Developer',
-                    'job3.company': 'AiNoCraft',
-                    'job3.period':  'Январь 2026 — настоящее время',
-                    'job3.li1': 'Развиваю собственный production-проект: Minecraft-сервер с микросервисной платформой, веб-порталом и launcher-клиентом.',
-                    'job3.li2': 'Реализовал backend на FastAPI, JWT-авторизацию с access/refresh-токенами, React SPA и production-инфраструктуру на VPS.',
-                    'job3.li3': 'Построил dockerized dev/prod-окружения, CI/CD-пайплайн, систему резервного копирования и мониторинга через Telegram-бота.',
-                    'job4.title':   'Python / AI Developer',
-                    'job4.company': 'Фриланс',
-                    'job4.period':  'Январь 2025 — Март 2025',
-                    'job4.li1': 'Собирал AI-пайплайны для практических задач: Speech-to-Text, извлечение сущностей и структурирование данных.',
-                    'job4.li2': 'Использовал OpenAI Whisper, Hugging Face Transformers и PyTorch для решений под конкретные бизнес-сценарии.',
-                    'job4.li3': 'Настраивал очистку, постобработку и валидацию результатов, чтобы получать пригодный для интеграции выходной формат.',
-                    'job5.title':   'Системный администратор',
-                    'job5.company': 'КонсультантПлюс',
-                    'job5.period':  'Октябрь 2022 — Февраль 2024',
-                    'job5.li1': 'Поддерживал и развивал серверную и сетевую инфраструктуру, работал с Linux, Windows Server и сетевыми сервисами.',
-                    'job5.li2': 'Настраивал VLAN, DHCP, DNS, маршрутизацию, firewall, резервное копирование и мониторинг.',
-                    'job5.li3': 'Получил первый опыт в инженерии данных через ETL-миграцию и синхронизацию данных из CRM.',
-                    'sec.proj.kicker': 'Кейсы',
-                    'sec.proj.title':  'Избранные проекты',
-                    'proj1.desc': 'Авторский проект: микросервисная платформа для Minecraft-сервера с backend, веб-порталом, launcher-клиентом и production-инфраструктурой. В проекте реализованы FastAPI backend, JWT-аутентификация, React SPA, Docker-окружения и CI/CD-процессы.',
-                    'sec.edu.kicker': 'Образование',
-                    'sec.edu.title':  'Образование и дополнительная информация',
-                    'edu.university': 'Курганский государственный университет',
-                    'edu.degree':     'Высшее образование, факультет транспортных систем',
-                    'edu.note':       'Специальность: высоковольтная электроэнергетика и электротехника, 2020',
-                    'edu.li1': 'Английский язык: B1.',
-                    'edu.li2': 'Готов к удалённой работе и командировкам.',
-                    'edu.li3': 'Водительские права: категория B.',
-                    'sec.skills.kicker':       'Компетенции',
-                    'sec.skills.title':        'Ключевые навыки',
-                    'skill.backend.title':     'Backend и API',
-                    'skill.data.title':        'Data и базы данных',
-                    'skill.integrations.title':'Интеграции и messaging',
-                    'skill.integrations.desc': 'Apache Kafka, RabbitMQ, SOAP, Webhooks, WebDAV, Nextcloud API, Tilda API, внешние API и сервисные integration layers.',
-                    'skill.devops.title':      'Infrastructure и DevOps',
-                    'skill.extra.title':       'Дополнительно',
-                },
-                en: {
-                    'name': 'Alexander Ozhereliev',
-                    'city': 'Kurgan',
-                    'page.title':   'Alexander Ozhereliev | Backend Developer / Python Engineer',
-                    'page.desc':    'Resume of Alexander Ozhereliev, Backend Developer / Python Engineer.',
-                    'ctrl.light':   'Light',
-                    'ctrl.dark':    'Dark',
-                    'lead1': 'Backend developer with commercial experience building services in Python and FastAPI, designing SQL and PL/SQL logic, integrating distributed systems, and maintaining production infrastructure.',
-                    'lead2': 'I cover the full development cycle — from data models, business logic, and APIs through CI/CD, deployment, monitoring, and environment support. Additionally advancing in AI/ML: LLM integrations, Speech-to-Text, and data processing.',
-                    'contacts.title':       'Contacts',
-                    'contact.location':     'Location',
-                    'contact.phone':        'Phone',
-                    'sec.profile.kicker':   'Profile',
-                    'sec.profile.title':    'Professional Summary',
-                    'profile.p1': 'Core focus: backend architecture, API development, data engineering, and reliable production environments. Comfortable in settings where you must simultaneously think as a developer, integrator, and support engineer.',
-                    'profile.p2': 'Concurrently building my own product AiNoCraft — a microservice platform with backend, frontend, desktop launcher client, and DevOps infrastructure. This deepens my hands-on experience designing systems from scratch and bringing them to a working production state.',
-                    'metric.strength.label': 'Strength',
-                    'metric.strength.value': 'Full-cycle backend development: data, API, integrations, and infrastructure',
-                    'metric.scope.label':    'Project Scope',
-                    'metric.scope.value':    'Enterprise services, AI/ML pipelines, internal platforms, and personal product',
-                    'metric.format.label':   'Work Format',
-                    'metric.format.value':   'Remote work, independent task ownership, collaboration with teams and stakeholders',
-                    'sec.exp.kicker':  'Experience',
-                    'sec.exp.title':   'Work Experience',
-                    'job1.title':   'Lead Python Backend Engineer',
-                    'job1.company': 'IC8',
-                    'job1.period':  'February 2026 — Present',
-                    'job1.li1': 'Develop and maintain backend services in Python and FastAPI for enterprise systems and integration scenarios.',
-                    'job1.li2': 'Design business logic, APIs, and data models; work with PostgreSQL, Redis, and Kafka.',
-                    'job1.li3': 'Improve backend fault tolerance, participate in CI/CD setup and production environment configuration.',
-                    'job2.title':   'SQL Developer / Software Support Specialist',
-                    'job2.company': 'IC8',
-                    'job2.period':  'February 2024 — February 2026',
-                    'job2.li1': 'Developed and maintained SQL and PL/SQL logic for a corporate WMS system.',
-                    'job2.li2': 'Designed data schemas, wrote packages, procedures, functions, and optimized critical queries and indexes.',
-                    'job2.li3': 'Automated reporting, participated in ETL processes, and grew from support into a SQL developer role.',
-                    'job3.title':   'Author & Fullstack Developer',
-                    'job3.company': 'AiNoCraft',
-                    'job3.period':  'January 2026 — Present',
-                    'job3.li1': 'Building a personal production project: Minecraft server with a microservice platform, web portal, and launcher client.',
-                    'job3.li2': 'Implemented FastAPI backend, JWT auth with access/refresh tokens, React SPA, and production infrastructure on VPS.',
-                    'job3.li3': 'Built dockerized dev/prod environments, CI/CD pipeline, backup system, and Telegram-bot monitoring.',
-                    'job4.title':   'Python / AI Developer',
-                    'job4.company': 'Freelance',
-                    'job4.period':  'January 2025 — March 2025',
-                    'job4.li1': 'Built AI pipelines for practical tasks: Speech-to-Text, entity extraction, and data structuring.',
-                    'job4.li2': 'Used OpenAI Whisper, Hugging Face Transformers, and PyTorch for solutions targeting specific business scenarios.',
-                    'job4.li3': 'Configured cleaning, post-processing, and result validation to produce integration-ready output formats.',
-                    'job5.title':   'System Administrator',
-                    'job5.company': 'ConsultantPlus',
-                    'job5.period':  'October 2022 — February 2024',
-                    'job5.li1': 'Maintained and developed server and network infrastructure; worked with Linux, Windows Server, and network services.',
-                    'job5.li2': 'Configured VLAN, DHCP, DNS, routing, firewall, backups, and monitoring.',
-                    'job5.li3': 'Gained first data engineering experience through ETL migration and CRM data synchronization.',
-                    'sec.proj.kicker': 'Projects',
-                    'sec.proj.title':  'Featured Projects',
-                    'proj1.desc': 'Personal project: a microservice platform for a Minecraft server with backend, web portal, launcher client, and production infrastructure. Includes FastAPI backend, JWT authentication, React SPA, Docker environments, and CI/CD pipelines.',
-                    'sec.edu.kicker': 'Education',
-                    'sec.edu.title':  'Education & Additional Information',
-                    'edu.university': 'Kurgan State University',
-                    'edu.degree':     "Bachelor's Degree, Faculty of Transport Systems",
-                    'edu.note':       'Specialization: High-Voltage Power Engineering and Electrical Engineering, 2020',
-                    'edu.li1': 'English: B1.',
-                    'edu.li2': 'Open to remote work and business travel.',
-                    'edu.li3': "Driver's license: Category B.",
-                    'sec.skills.kicker':       'Skills',
-                    'sec.skills.title':        'Key Skills',
-                    'skill.backend.title':     'Backend & API',
-                    'skill.data.title':        'Data & Databases',
-                    'skill.integrations.title':'Integrations & Messaging',
-                    'skill.integrations.desc': 'Apache Kafka, RabbitMQ, SOAP, Webhooks, WebDAV, Nextcloud API, Tilda API, external APIs and service integration layers.',
-                    'skill.devops.title':      'Infrastructure & DevOps',
-                    'skill.extra.title':       'Additional',
-                }
-            };
-
-            /* ── Pill track positioning ───────────────────────────────── */
-            function updateTrack(switchEl, instant) {
-                var active = switchEl.querySelector('.pill-switch__btn.is-active');
-                var track  = switchEl.querySelector('.pill-switch__track');
-                if (!active || !track) return;
-                if (instant) {
-                    track.style.transition = 'none';
-                }
-                track.style.left  = active.offsetLeft + 'px';
-                track.style.width = active.offsetWidth + 'px';
-                if (instant) {
-                    /* Force reflow so the position takes effect before transition re-enables */
-                    track.offsetHeight; // eslint-disable-line no-unused-expressions
-                    track.style.transition = '';
-                }
-            }
-
-            /* ── Theme ────────────────────────────────────────────────── */
-            const themeSwitch = document.getElementById('theme-switch');
-
-            function applyTheme(theme, instant) {
-                root.dataset.theme = theme;
-                if (themeSwitch) {
-                    themeSwitch.querySelectorAll('.pill-switch__btn').forEach(function (btn) {
-                        btn.classList.toggle('is-active', btn.dataset.value === theme);
-                    });
-                    updateTrack(themeSwitch, instant);
-                }
-            }
-
-            /* ── Language ─────────────────────────────────────────────── */
-            const langSwitch = document.getElementById('lang-switch');
-
-            function applyLang(lang, instant) {
-                html.lang = lang;
-                root.dataset.lang = lang;
-                var dict = i18n[lang];
-                document.querySelectorAll('[data-i18n]').forEach(function (el) {
-                    var val = dict[el.dataset.i18n];
-                    if (val !== undefined) el.textContent = val;
-                });
-                document.title = dict['page.title'];
-                var metaDesc = document.querySelector('meta[name="description"]');
-                if (metaDesc) metaDesc.content = dict['page.desc'];
-                if (langSwitch) {
-                    langSwitch.querySelectorAll('.pill-switch__btn').forEach(function (btn) {
-                        btn.classList.toggle('is-active', btn.dataset.value === lang);
-                    });
-                    updateTrack(langSwitch, instant);
-                }
-            }
-
-            /* ── Init ─────────────────────────────────────────────────── */
-            var savedTheme = localStorage.getItem(THEME_KEY) === 'graphite' ? 'graphite' : 'paper';
-            var savedLang  = localStorage.getItem(LANG_KEY)  === 'en'       ? 'en'       : 'ru';
-            applyTheme(savedTheme, true);
-            applyLang(savedLang, true);
-
-            /* ── Events ───────────────────────────────────────────────── */
-            if (themeSwitch) {
-                themeSwitch.querySelectorAll('.pill-switch__btn').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        applyTheme(btn.dataset.value);
-                        localStorage.setItem(THEME_KEY, btn.dataset.value);
-                    });
-                });
-            }
-
-            if (langSwitch) {
-                langSwitch.querySelectorAll('.pill-switch__btn').forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        applyLang(btn.dataset.value);
-                        localStorage.setItem(LANG_KEY, btn.dataset.value);
-                    });
-                });
-            }
-
-            /* Re-calc track on resize (in case of font load / reflow) */
-            window.addEventListener('resize', function () {
-                if (themeSwitch) updateTrack(themeSwitch);
-                if (langSwitch)  updateTrack(langSwitch);
-            });
-        }());
-    </script>
 </body>
 </html>
