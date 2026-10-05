@@ -63,8 +63,8 @@ p + p { margin-top: 8px; }
 .lead--secondary { margin-top: 10px; color: var(--accent); font-size: 14px; }
 .masthead__aside { min-width: 0; padding-left: 24px; border-left: 1px solid var(--line); }
 .contact-identity { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-.portrait { flex: 0 0 64px; }
-.portrait img { width: 64px; height: 78px; border: 1px solid var(--line); border-radius: 2px; object-fit: cover; object-position: center 28%; }
+.portrait { flex: 0 0 120px; }
+.portrait img { width: 120px; height: 144px; border: 1px solid var(--line); border-radius: 2px; object-fit: cover; object-position: center; }
 .contact-city { font-size: 14px; font-weight: 600; }
 .contact-format { margin-top: 2px; color: var(--muted); font-size: 12px; }
 .contact-list { display: grid; gap: 6px; list-style: none; padding: 0; font-size: 13px; }
@@ -150,7 +150,8 @@ p + p { margin-top: 8px; }
     h2 { font-size: 20px; }
     .lead { font-size: 14px; }
     .lead--secondary { font-size: 13px; }
-    .portrait { display: none; }
+    .portrait { flex-basis: 100px; }
+    .portrait img { width: 100px; height: 120px; }
     .contact-list { font-size: 12px; gap: 6px 16px; }
     .contact-label { font-size: 11px; }
     .contact-identity { margin-bottom: 12px; }
@@ -184,8 +185,8 @@ p + p { margin-top: 8px; }
     .lead--secondary { margin-top: 8px; font-size: 10px; }
     .masthead__aside { padding: 0 0 0 16px; border-left: 1px solid var(--line); border-top: 0; }
     .contact-identity { gap: 12px; margin-bottom: 10px; }
-    .portrait { display: block; flex-basis: 48px; }
-    .portrait img { width: 48px; height: 58px; }
+    .portrait { display: block; flex-basis: 64px; }
+    .portrait img { width: 64px; height: 78px; }
     .contact-city { font-size: 11px; }
     .contact-format { font-size: 9px; }
     .contact-list { display: grid; gap: 3px; font-size: 9px; }
