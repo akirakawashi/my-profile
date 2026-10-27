@@ -32,8 +32,6 @@
         'work.format': 'Remote work',
         'contacts.title': 'Contacts',
         'contact.phone': 'Phone',
-        'contact.project': 'Project',
-        'contact.studio': 'Studio',
         'sec.exp.title': 'Work Experience',
         'job1.title': 'AI Engineer / Fullstack Developer / Team Lead',
         'job1.company': 'IC8',
