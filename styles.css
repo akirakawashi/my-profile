@@ -73,6 +73,9 @@ p + p { margin-top: 8px; }
 .company { margin-top: 5px; color: var(--accent); font-size: 13px; font-weight: 600; }
 .period { padding-top: 2px; color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; }
 .career-path { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.career-result { margin-top: 16px; padding: 12px 14px; border-left: 2px solid var(--accent); background: var(--accent-soft); font-size: 13px; font-weight: 600; }
+.project-metric, .project-status { margin-top: 10px; color: var(--accent); font-size: 13px; font-weight: 600; }
+.timeline-item > .stack { margin-top: 12px; color: var(--accent); font-size: 11px; }
 .detail-list { display: grid; gap: 5px; margin-top: 12px; padding-left: 18px; font-size: 13px; }
 .detail-list li { padding-left: 2px; }
 .detail-list li::marker, .service-list li::marker { color: var(--accent); font-size: 0.8em; }
@@ -173,8 +176,8 @@ p + p { margin-top: 8px; }
     .lead { margin-top: 12px; font-size: 11px; line-height: 1.5; }
     .lead--secondary { margin-top: 8px; font-size: 10px; }
     .masthead__aside { padding: 0 0 0 16px; border-left: 1px solid var(--line); border-top: 0; }
-    .contact-identity { gap: 12px; margin-bottom: 10px; }
-    .portrait { width: 120px; }
+    .contact-identity { flex-direction: row; justify-content: center; gap: 12px; margin-bottom: 10px; text-align: left; }
+    .portrait { width: 96px; }
     .contact-city { font-size: 11px; }
     .contact-format { font-size: 9px; }
     .contact-list { display: grid; gap: 3px; font-size: 9px; }
@@ -182,30 +185,36 @@ p + p { margin-top: 8px; }
     .contact-label { font-size: 8px; }
     .resume-layout { display: flex; flex-direction: column; gap: 0; padding: 0; }
     .resume-main { width: 100%; }
-    .resume-sidebar { order: -1; width: 100%; padding: 14px 0; border-left: 0; border-bottom: 1px solid var(--line); }
-    .skill-stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 20px; }
+    .resume-sidebar { order: 0; width: 100%; margin-top: 10px; padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--line); border-bottom: 0; }
+    .skill-stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 20px; }
     .skill-group + .skill-group { margin: 0; padding: 0; border: 0; }
     .skill-group { break-inside: avoid; }
     .skill-group h3 { margin-bottom: 4px; font-size: 10px; }
     .skill-group p { font-size: 9px; line-height: 1.5; }
-    .skill-group .skill-detail { margin-top: 4px; font-size: 8px; }
-    .resume-section { padding-top: 16px; }
-    .resume-section + .resume-section { margin-top: 14px; padding-top: 16px; }
-    .section-heading { margin-bottom: 12px; break-after: avoid; }
+    .skill-group .skill-detail { display: none; }
+    .resume-section { padding-top: 12px; }
+    .resume-section + .resume-section { margin-top: 10px; padding-top: 12px; }
+    .section-heading { margin-bottom: 10px; break-after: avoid; }
     .section-intro { font-size: 10px; }
     .timeline-item, .project-card, .education-block { break-inside: avoid; }
-    .timeline-item + .timeline-item, .project-card + .project-card { margin-top: 12px; padding-top: 12px; }
+    .timeline-item--detailed { break-inside: auto; }
+    .work-project { break-inside: avoid; }
+    .timeline-item__head, .work-project h4 { break-after: avoid; }
+    .timeline-item + .timeline-item, .project-card + .project-card { margin-top: 8px; padding-top: 8px; }
     .timeline-item__head { grid-template-columns: minmax(0, 1fr) auto; gap: 16px; }
     .timeline-item h3 { font-size: 12px; }
     .company, .period { font-size: 9px; }
     .career-path { margin-top: 8px; font-size: 10px; }
+    .career-result { margin-top: 10px; padding: 8px 10px; font-size: 10px; break-inside: avoid; }
+    .project-metric, .project-status { margin-top: 6px; font-size: 10px; }
+    .timeline-item > .stack { margin-top: 8px; font-size: 8px; }
     .period { text-align: right; white-space: nowrap; }
     .detail-list, .service-list { margin-top: 8px; gap: 3px; padding-left: 13px; font-size: 10px; }
     .work-project { margin-top: 12px; padding-top: 12px; }
     .work-project h4 { margin-bottom: 5px; font-size: 11px; }
     .work-project > p { font-size: 10px; }
     .work-project .stack { margin-top: 8px; font-size: 8px; }
-    .project-list { margin-top: 14px; }
+    .project-list { margin-top: 10px; }
     .project-card__head { gap: 4px; margin-bottom: 5px; }
     .project-card h3 { font-size: 12px; }
     .project-type { font-size: 9px; }
