@@ -59,14 +59,27 @@
                     <div class="section-heading"><h2 id="experience-title" data-i18n="sec.exp.title">Опыт работы</h2></div>
                     <div class="timeline">
                         <article class="timeline-item">
-                            <div class="timeline-item__head"><div><h3 data-i18n="job1.title">Ведущий инженер серверной разработки Python</h3><p class="company" data-i18n="job1.company">АйСи Эйт</p></div><p class="period" data-i18n="job1.period">Февраль 2024 — настоящее время</p></div>
+                            <div class="timeline-item__head"><div><h3 data-i18n="job1.title">Team Lead / AI Engineer</h3><p class="company" data-i18n="job1.company">АйСи Эйт</p></div><p class="period" data-i18n="job1.period">Февраль 2024 — настоящее время</p></div>
+                            <p class="career-path" data-i18n="job1.growth">Вырос внутри компании: техническая поддержка → Backend Developer → AI Engineer. Сейчас выполняю функции руководителя отдела разработки и продолжаю писать код вместе с командой.</p>
                             <ul class="detail-list">
-                                <li data-i18n="job1.li1">Разрабатываю и сопровождаю backend-сервисы на Python и FastAPI: реализую серверную логику корпоративных систем и обработку данных.</li>
+                                <li data-i18n="job1.leadership">Веду разработку проектов отдела: определяю техническое направление, координирую работу команды и согласую взаимодействие компонентов системы.</li>
+                                <li data-i18n="job1.architecture">Замещал архитектора системы: принимал архитектурные решения и отвечал за согласованность технических решений между сервисами.</li>
+                                <li data-i18n="job1.li1">Вместе с командой разрабатываю AI-сервисы и fullstack-приложения: backend на Python/FastAPI, frontend на React/Next.js и TypeScript, интеграции нейросетей.</li>
                                 <li data-i18n="job1.li2">Проектирую API и модели данных, реализую бизнес-логику и интеграции с внешними системами. В работе использую PostgreSQL, Redis и Kafka.</li>
                                 <li data-i18n="job1.li3">В корпоративной WMS-системе разрабатываю SQL- и PL/SQL-логику: схемы данных, пакеты, процедуры и функции. Оптимизирую запросы и индексы, сопровождаю изменения в базе.</li>
                                 <li data-i18n="job1.li4">Автоматизирую отчётность и участвую в ETL-процессах обработки и переноса данных.</li>
                                 <li data-i18n="job1.li5">Автоматизирую тестирование и CI/CD. Сопровождаю рабочие окружения и разбираю проблемы, которые возникают при эксплуатации сервисов.</li>
                             </ul>
+                            <section class="work-project" aria-labelledby="speech-project-title">
+                                <h4 id="speech-project-title" data-i18n="job1.speech.title">Речевая аналитика колл-центра</h4>
+                                <p data-i18n="job1.speech.desc">Разрабатываю систему распознавания и анализа телефонных разговоров: от загрузки записей до классификации обращений и оценки качества по скриптам продаж.</p>
+                                <ul class="detail-list">
+                                    <li data-i18n="job1.speech.li1">Разделяю API, обработку аудио и ASR на отдельные сервисы. Реализую очередь заданий, повторы при сбоях, хранение аудио в MinIO и результатов в PostgreSQL.</li>
+                                    <li data-i18n="job1.speech.li2">Интегрирую GigaAM с GPU-инференсом через Triton / TensorRT, поиск речи Silero VAD и разделение говорящих. Связываю расшифровки с LLM-анализом и оценкой разговоров.</li>
+                                    <li data-i18n="job1.speech.li3">Разрабатываю интерфейс на Next.js, React и TypeScript: поиск по расшифровкам, просмотр диалогов, дашборды, оценка качества и администрирование.</li>
+                                </ul>
+                                <p class="stack">Python · FastAPI · PostgreSQL · MinIO · GigaAM · Triton / TensorRT · LLM · Next.js · TypeScript</p>
+                            </section>
                         </article>
                         <article class="timeline-item">
                             <div class="timeline-item__head"><div><h3>Python / AI Developer</h3><p class="company" data-i18n="job4.company">Фриланс</p></div><p class="period" data-i18n="job4.period">Январь 2025 — март 2025</p></div>
@@ -154,9 +167,9 @@
                     <div class="section-heading"><h2 id="skills-title" data-i18n="sec.skills.title">Навыки</h2></div>
                     <div class="skill-stack">
                         <article class="skill-group"><h3 data-i18n="skill.backend.title">Backend и архитектура</h3><p>Python, FastAPI, REST API, asyncio, Pydantic, SQLAlchemy / SQLModel, Alembic, Dishka.</p><p class="skill-detail" data-i18n="skill.backend.desc">Проектирую слоистую архитектуру и контракты API. Выношу длительные задачи в фоновые воркеры, учитываю идемпотентность операций.</p></article>
-                        <article class="skill-group"><h3>Frontend</h3><p>React, TypeScript, JavaScript, HTML, CSS, Vite.</p><p class="skill-detail" data-i18n="skill.frontend.desc">Разрабатываю веб-интерфейсы, личные кабинеты и административные панели. Связываю их с API и серверными правилами доступа.</p></article>
+                        <article class="skill-group"><h3>Frontend</h3><p>React, Next.js, TypeScript, JavaScript, HTML, CSS, Vite.</p><p class="skill-detail" data-i18n="skill.frontend.desc">Разрабатываю веб-интерфейсы, личные кабинеты и административные панели. Связываю их с API и серверными правилами доступа.</p></article>
                         <article class="skill-group"><h3>LLM / RAG</h3><p>LLM, RAG, VLM, Qwen3-VL, llama.cpp.</p><p class="skill-detail" data-i18n="skill.llm.desc">Работаю с контекстом и поиском по данным, интегрирую языковые и мультимодальные модели в сервисы. Использую AI-инструменты для разработки.</p></article>
-                        <article class="skill-group"><h3>ML / DL</h3><p>PyTorch, YOLO, OpenCV, Hugging Face, Whisper, TensorFlow / Keras, XGBoost.</p><p class="skill-detail" data-i18n="skill.ai.desc">Готовлю данные и обучаю модели. Работаю с видеоаналитикой, детекцией и трекингом, обработкой речи.</p></article>
+                        <article class="skill-group"><h3>ML / DL</h3><p>PyTorch, YOLO, OpenCV, Hugging Face, Whisper, GigaAM, Silero VAD, Triton / TensorRT, TensorFlow / Keras, XGBoost.</p><p class="skill-detail" data-i18n="skill.ai.desc">Готовлю данные и обучаю модели. Работаю с видеоаналитикой, детекцией и трекингом, обработкой речи.</p></article>
                         <article class="skill-group"><h3 data-i18n="skill.data.title">Базы данных</h3><p>PostgreSQL, Oracle, SQL, PL/SQL, Redis, MinIO / S3.</p><p class="skill-detail" data-i18n="skill.data.desc">Проектирую модели данных и транзакции. Оптимизирую SQL-запросы и индексы, участвую в ETL-процессах.</p></article>
                         <article class="skill-group"><h3 data-i18n="skill.integrations.title">Интеграции и безопасность</h3><p>Kafka, RabbitMQ, Webhooks, SOAP, WebDAV, JWT, Keycloak / OIDC.</p><p class="skill-detail" data-i18n="skill.integrations.desc">Настраиваю авторизацию, управление сессиями и доступом. Подключаю внешние API и организую обмен данными между сервисами.</p></article>
                         <article class="skill-group"><h3 data-i18n="skill.devops.title">Инфраструктура и тестирование</h3><p>Docker, Docker Compose, Kubernetes / k3s, Helm, GitHub Actions, Linux, Nginx / Traefik, pytest, Testcontainers.</p><p class="skill-detail" data-i18n="skill.devops.desc">Настраиваю CI/CD, миграции и интеграционные тесты. Работаю с мониторингом и резервным копированием.</p></article>

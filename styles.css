@@ -21,8 +21,8 @@ a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 4
 a:hover { color: var(--accent); text-decoration-color: currentColor; text-shadow: 0 0 12px var(--accent-glow); }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 img { display: block; max-width: 100%; }
-h1, h2, h3, p, ul, figure { margin: 0; }
-h1, h2, h3 { line-height: 1.35; }
+h1, h2, h3, h4, p, ul, figure { margin: 0; }
+h1, h2, h3, h4 { line-height: 1.35; }
 h1 { max-width: 620px; font-size: clamp(30px, 3.2vw, 40px); font-weight: 650; letter-spacing: -1px; }
 h2 { font-size: 21px; font-weight: 650; letter-spacing: -0.3px; }
 h3 { font-size: 16px; font-weight: 650; }
@@ -72,9 +72,14 @@ p + p { margin-top: 8px; }
 .timeline-item h3 { font-size: 16px; }
 .company { margin-top: 5px; color: var(--accent); font-size: 13px; font-weight: 600; }
 .period { padding-top: 2px; color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; }
+.career-path { margin-top: 12px; color: var(--muted); font-size: 13px; }
 .detail-list { display: grid; gap: 5px; margin-top: 12px; padding-left: 18px; font-size: 13px; }
 .detail-list li { padding-left: 2px; }
 .detail-list li::marker, .service-list li::marker { color: var(--accent); font-size: 0.8em; }
+.work-project { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.work-project h4 { margin-bottom: 8px; color: var(--accent); font-size: 14px; font-weight: 650; }
+.work-project > p { font-size: 13px; }
+.work-project .stack { margin-top: 12px; color: var(--accent); font-size: 11px; font-weight: 500; }
 
 .project-list { margin-top: 20px; }
 .project-card + .project-card { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
@@ -193,8 +198,13 @@ p + p { margin-top: 8px; }
     .timeline-item__head { grid-template-columns: minmax(0, 1fr) auto; gap: 16px; }
     .timeline-item h3 { font-size: 12px; }
     .company, .period { font-size: 9px; }
+    .career-path { margin-top: 8px; font-size: 10px; }
     .period { text-align: right; white-space: nowrap; }
     .detail-list, .service-list { margin-top: 8px; gap: 3px; padding-left: 13px; font-size: 10px; }
+    .work-project { margin-top: 12px; padding-top: 12px; }
+    .work-project h4 { margin-bottom: 5px; font-size: 11px; }
+    .work-project > p { font-size: 10px; }
+    .work-project .stack { margin-top: 8px; font-size: 8px; }
     .project-list { margin-top: 14px; }
     .project-card__head { gap: 4px; margin-bottom: 5px; }
     .project-card h3 { font-size: 12px; }
