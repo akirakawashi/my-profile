@@ -54,11 +54,22 @@
         <main class="resume-layout">
             <div class="resume-main">
                 <section class="resume-section" id="experience" aria-labelledby="experience-title">
-                    <div class="section-heading"><h2 id="experience-title" data-i18n="sec.exp.title">Опыт работы</h2></div>
+                    <div class="section-heading"><p class="section-kicker" data-i18n="sec.exp.kicker">01 / Карьера</p><h2 id="experience-title" data-i18n="sec.exp.title">Опыт работы</h2><p class="section-caption" data-i18n="sec.exp.caption">Работа в компаниях и развитие карьеры</p></div>
                     <div class="timeline">
-                        <article class="timeline-item timeline-item--detailed">
-                            <div class="timeline-item__head"><div><h3 data-i18n="job1.title">AI Engineer / Fullstack Developer / Team Lead</h3><p class="company" data-i18n="job1.company">АйСи Эйт</p></div><p class="period" data-i18n="job1.period">Октябрь 2022 — настоящее время</p></div>
-                            <p class="career-path" data-i18n="job1.growth">Начал работу в компании специалистом технической поддержки, затем перешёл в backend-разработку. С развитием AI-направления переключился на создание сервисов с нейросетевыми моделями. Постепенно взял на себя проектирование архитектуры, выбор технологий и техническое руководство командой.</p>
+                        <article class="timeline-item timeline-item--detailed experience-card experience-card--current">
+                            <div class="timeline-item__head">
+                                <div>
+                                    <p class="entry-label" data-i18n="job1.kind">Текущее место работы</p>
+                                    <h3 class="employer" data-i18n="job1.company">АйСи Эйт</h3>
+                                    <p class="entry-role" data-i18n="job1.title">AI Engineer / Fullstack Developer / Team Lead</p>
+                                </div>
+                                <p class="period" data-i18n="job1.period">Октябрь 2022 — настоящее время</p>
+                            </div>
+                            <div class="career-growth">
+                                <p class="block-label" data-i18n="job1.growth.label">Карьерный рост</p>
+                                <p class="career-path" data-i18n="job1.growth">Начал работу в компании специалистом технической поддержки, затем перешёл в backend-разработку. С развитием AI-направления переключился на создание сервисов с нейросетевыми моделями. Постепенно взял на себя проектирование архитектуры, выбор технологий и техническое руководство командой.</p>
+                            </div>
+                            <h4 class="subsection-title" data-i18n="job1.scope.title">Роль и ответственность</h4>
                             <p class="career-path" data-i18n="job1.team">Координирую работу двух разработчиков, преимущественно занимающихся LLM. Отвечаю за планирование, распределение задач и техническую сторону проектов. Продолжаю писать код: самостоятельно реализую отдельные компоненты и участвую в разработке вместе с командой.</p>
                             <ul class="detail-list">
                                 <li data-i18n="job1.leadership">Планирую, декомпозирую, ставлю и оцениваю задачи по разработке AI-продуктов.</li>
@@ -69,26 +80,39 @@
                                 <li data-i18n="job1.ai">Создаю AI-сервисы для компьютерного зрения, распознавания речи и обработки документов. Интегрирую LLM/VLM и проектирую пайплайны обработки данных.</li>
                                 <li data-i18n="job1.li5">Разворачиваю приложения в Docker и Kubernetes, работаю с CI/CD, мониторингом, логированием и контролем доступа.</li>
                             </ul>
+                            <section class="work-portfolio" aria-labelledby="work-portfolio-title">
+                                <div class="subsection-heading">
+                                    <h4 id="work-portfolio-title" class="subsection-title" data-i18n="job1.projects.title">Ключевые результаты в АйСи Эйт</h4>
+                                    <p class="subsection-caption" data-i18n="job1.projects.caption">Коммерческие AI-продукты, созданные в рамках этой работы</p>
+                                </div>
                             <p class="career-result" data-i18n="job1.results">За первые 4 месяца технического руководства вместе с командой вывел в production 3 AI-продукта: видеоаналитику наружной рекламы, речевую аналитику и корпоративную LLM-платформу. Проектировал архитектуру, координировал разработку и самостоятельно реализовывал часть функциональности.</p>
                             <section class="work-project" aria-labelledby="ad-project-title">
-                                <h4 id="ad-project-title" data-i18n="proj2.title">Система анализа наружной рекламы · Computer Vision</h4>
+                                <div class="work-project__head"><h5 id="ad-project-title" data-i18n="proj2.title">Система анализа наружной рекламы · Computer Vision</h5><span class="status-badge" data-i18n="project.production">В production</span></div>
                                 <p data-i18n="proj2.desc">Самостоятельно разработал и вывел в production систему анализа видеозаписей. Сервис обнаруживает рекламные конструкции, классифицирует бренды с помощью VLM, выполняет географическую привязку и формирует аналитику по маршрутам. Помогает выявлять проблемные участки размещения рекламы.</p>
                                 <p class="project-metric" data-i18n="proj2.metric">Еженедельно обрабатывает около 4–5 часов видеоматериалов.</p>
                             </section>
                             <section class="work-project" aria-labelledby="speech-project-title">
-                                <h4 id="speech-project-title" data-i18n="job1.speech.title">Система речевой аналитики</h4>
+                                <div class="work-project__head"><h5 id="speech-project-title" data-i18n="job1.speech.title">Система речевой аналитики</h5><span class="status-badge" data-i18n="project.production">В production</span></div>
                                 <p data-i18n="job1.speech.desc">Совместно с разработчиком переработал систему распознавания и анализа телефонных разговоров. Разделил приложение на независимые сервисы, оптимизировал обработку аудио и внедрил GigaAM с GPU-инференсом через Triton/TensorRT.</p>
                                 <p class="project-metric" data-i18n="job1.speech.metric">В нагрузочных тестах полный пайплайн достигал производительности около 5 000 звонков в час.</p>
                                 <p data-i18n="job1.speech.status">Система работает в production: используется для анализа обращений, определения тем разговоров и проблем клиентов.</p>
                             </section>
                             <section class="work-project" aria-labelledby="llm-project-title">
-                                <h4 id="llm-project-title" data-i18n="job1.llm.title">Корпоративная LLM-платформа</h4>
+                                <div class="work-project__head"><h5 id="llm-project-title" data-i18n="job1.llm.title">Корпоративная LLM-платформа</h5><span class="status-badge" data-i18n="project.production">В production</span></div>
                                 <p data-i18n="job1.llm.desc">Спроектировал архитектуру платформы для централизованной работы с языковыми и мультимодальными моделями. Координирую её развитие, интеграцию с внутренними продуктами и оптимизацию GPU-инфраструктуры.</p>
                                 <p data-i18n="job1.llm.models">Платформа объединяет LLM/VLM, guardrails и инструменты для создания AI-агентов. Развиваем агентский подход для автоматизации рабочих процессов сотрудников.</p>
                             </section>
+                            </section>
                         </article>
-                        <article class="timeline-item">
-                            <div class="timeline-item__head"><div><h3 data-i18n="job2.title">Системный администратор</h3><p class="company" data-i18n="job2.company">Тепло Тюмени — филиал ПАО «СУЭНКО»</p></div><p class="period" data-i18n="job2.period">Сентябрь 2020 — сентябрь 2022</p></div>
+                        <article class="timeline-item experience-card">
+                            <div class="timeline-item__head">
+                                <div>
+                                    <p class="entry-label" data-i18n="job2.kind">Предыдущее место работы</p>
+                                    <h3 class="employer" data-i18n="job2.company">Тепло Тюмени — филиал ПАО «СУЭНКО»</h3>
+                                    <p class="entry-role" data-i18n="job2.title">Системный администратор</p>
+                                </div>
+                                <p class="period" data-i18n="job2.period">Сентябрь 2020 — сентябрь 2022</p>
+                            </div>
                             <ul class="detail-list">
                                 <li data-i18n="job2.li1">Администрировал Windows Server и Linux, сопровождал корпоративную IT-инфраструктуру.</li>
                                 <li data-i18n="job2.li2">Настраивал локальные сети, сетевое оборудование, VLAN, DHCP, DNS и маршрутизацию.</li>
@@ -100,10 +124,13 @@
                 </section>
 
                 <section class="resume-section" id="projects" aria-labelledby="projects-title">
-                    <div class="section-heading"><h2 id="projects-title" data-i18n="sec.proj.title">Собственные проекты и фриланс</h2></div>
-                    <p class="section-intro" data-i18n="projects.intro">Помимо основной работы создаю собственные проекты и занимаюсь заказной разработкой веб-сервисов, интеграций и AI-решений. Заказные проекты выполняю как независимый разработчик.</p>
+                    <div class="section-heading">
+                        <p class="section-kicker" data-i18n="sec.proj.kicker">02 / Авторский проект</p>
+                        <h2 id="projects-title" data-i18n="sec.proj.title">Собственный проект</h2>
+                        <p class="section-caption" data-i18n="sec.proj.caption">AiNoCraft — действующая игровая платформа</p>
+                    </div>
                     <div class="project-list">
-                        <article class="project-card">
+                        <article class="project-card project-card--featured">
                             <div class="project-card__head"><h3>AiNoCraft</h3><span class="project-type" data-i18n="proj1.type">Действующая платформа</span></div>
                             <p class="project-role"><span data-i18n="job3.title">Автор проекта / Fullstack Developer</span><span data-i18n="job3.period">Январь 2026 — настоящее время</span></p>
                             <p class="career-path" data-i18n="proj1.desc">Создал и развиваю собственную игровую платформу на базе Minecraft: веб-портал, личный кабинет, административная панель, desktop-лаунчер, игровой сервер и собственные моды.</p>
@@ -117,6 +144,16 @@
                             <p class="project-status" data-i18n="proj1.status">Проект доступен пользователям: можно зарегистрироваться, установить клиент и играть.</p>
                             <p class="stack">Python · FastAPI · React · PostgreSQL · Redis · MinIO · Docker · Kubernetes · Helm · GitHub Actions</p>
                         </article>
+                    </div>
+                </section>
+
+                <section class="resume-section" id="freelance" aria-labelledby="freelance-title">
+                    <div class="section-heading">
+                        <p class="section-kicker" data-i18n="sec.freelance.kicker">03 / Заказная разработка</p>
+                        <h2 id="freelance-title" data-i18n="sec.freelance.title">Фриланс</h2>
+                    </div>
+                    <p class="section-intro" data-i18n="projects.intro">Веб-сервисы, интеграции и AI-решения на заказ. Заказные проекты выполняю как независимый разработчик.</p>
+                    <div class="project-list project-list--grid">
                         <article class="project-card">
                             <div class="project-card__head"><h3>Volnateca</h3><span class="project-type" data-i18n="proj4.type">Запущена</span></div>
                             <p data-i18n="proj4.desc">Платформа геймификации во ВКонтакте с системой заданий, достижений и вознаграждений. Реализовал callback-сервер, учёт баллов, реферальную механику, магазин призов и административную панель.</p>
@@ -128,21 +165,21 @@
                             <p class="stack">Python · FastAPI · PostgreSQL · Redis · SQLAlchemy · React · Docker</p>
                         </article>
                     </div>
-                    <p class="section-intro career-path" data-i18n="projects.goal">Предпочитаю продукты, где могу влиять на архитектуру, технические решения и организацию разработки. Хочу развиваться как технический руководитель, сохраняя практическое участие в разработке.</p>
                 </section>
 
                 <section class="resume-section" aria-labelledby="education-title">
-                    <div class="section-heading"><h2 id="education-title" data-i18n="sec.edu.title">Образование и условия работы</h2></div>
+                    <div class="section-heading"><p class="section-kicker" data-i18n="sec.edu.kicker">04 / Образование и формат работы</p><h2 id="education-title" data-i18n="sec.edu.title">Образование и условия работы</h2></div>
                     <div class="education-block">
                         <div><h3 data-i18n="edu.university">Курганский государственный университет</h3><p data-i18n="edu.degree">Высшее образование, факультет транспортных систем</p><p class="small-note" data-i18n="edu.note">Высоковольтная электроэнергетика и электротехника · 2020</p><p class="small-note" data-i18n="edu.certificate">Сертификат Data Scientist · 2022</p></div>
                         <ul class="detail-list detail-list--compact"><li data-i18n="edu.li1">Английский язык — B1.</li><li data-i18n="edu.li2">Работаю удалённо. Готов к командировкам.</li><li data-i18n="edu.li3">Водительские права категории B.</li></ul>
                     </div>
+                    <p class="work-preference" data-i18n="projects.goal">Предпочитаю продукты, где могу влиять на архитектуру, технические решения и организацию разработки. Хочу развиваться как технический руководитель, сохраняя практическое участие в разработке.</p>
                 </section>
             </div>
 
             <aside class="resume-sidebar" id="skills" aria-labelledby="skills-title">
                 <section class="skills-section">
-                    <div class="section-heading"><h2 id="skills-title" data-i18n="sec.skills.title">Навыки</h2></div>
+                    <div class="section-heading"><h2 id="skills-title" data-i18n="sec.skills.title">Навыки</h2><p class="section-caption" data-i18n="sec.skills.caption">Стек и компетенции</p></div>
                     <div class="skill-stack">
                         <article class="skill-group"><h3 data-i18n="skill.lead.title">Руководство и архитектура</h3><p data-i18n="skill.lead.stack">Team Lead, управление разработкой, планирование и декомпозиция задач, code review, архитектура ПО.</p><p class="skill-detail" data-i18n="skill.lead.desc">Руковожу небольшой командой, выбираю технические подходы и помогаю разработчикам решать сложные задачи.</p></article>
                         <article class="skill-group"><h3>Backend</h3><p data-i18n="skill.backend.stack">Python, FastAPI, REST API, asyncio, SQLAlchemy, Pydantic, Alembic, фоновые задачи, интеграции.</p><p class="skill-detail" data-i18n="skill.backend.desc">Проектирую API, структуры баз данных и взаимодействие сервисов.</p></article>
