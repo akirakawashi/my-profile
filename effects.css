@@ -1,0 +1,60 @@
+:root {
+    --motion-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.reading-progress { position: fixed; inset: 0 0 auto; height: 3px; z-index: 20; pointer-events: none; }
+.reading-progress span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, var(--accent), #8cffe1, #70c8ff); transform: scaleX(0); transform-origin: left; box-shadow: 0 0 12px var(--accent-glow-strong); }
+
+/* A small circuit scene uses the same moving-light vocabulary as startup. */
+.architecture-scene { position: relative; max-width: 680px; margin-top: 20px; isolation: isolate; }
+.architecture-scene svg { position: relative; display: block; width: 100%; height: auto; overflow: visible; }
+.scene-halo { position: absolute; inset: 5% 14%; z-index: -1; background: radial-gradient(ellipse, rgba(0, 203, 160, .12), rgba(71, 160, 212, .03) 48%, transparent 72%); }
+.scene-port rect { fill: #121d29; stroke: #345561; stroke-width: 1; }
+.scene-icon { fill: none; stroke: #8cbfbf; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.scene-port-line { stroke: #688994; stroke-opacity: .55; stroke-width: 2; stroke-linecap: round; }
+.scene-packet, .scene-satellite { opacity: 0; }
+.scene-core { animation: core-energy 4.6s ease-in-out infinite paused; transform-box: fill-box; transform-origin: center; }
+.scene-status { animation: status-energy 4.6s ease-in-out infinite paused; }
+.is-animating .scene-core, .is-animating .scene-status { animation-play-state: running; }
+@keyframes core-energy {
+    0%, 100% { fill-opacity: .08; stroke-opacity: .35; }
+    35%, 55% { fill-opacity: .25; stroke-opacity: .9; }
+    75% { fill-opacity: .12; stroke-opacity: .55; }
+}
+@keyframes status-energy { 0%, 100% { opacity: .4; } 38%, 60% { opacity: 1; } }
+
+/* Only the decorative rim moves; the photo and its layout stay still. */
+.portrait { position: relative; }
+.portrait-rim { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.portrait-rim rect { fill: none; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.portrait-rim .rim-track { stroke: #00cba0; stroke-opacity: .2; }
+.rim-streak { stroke: #a4ffe4; stroke-dasharray: 12 88; stroke-linecap: round; animation: portrait-current 9s linear infinite paused; }
+.rim-streak--second { stroke: #8cd5ff; stroke-dasharray: 7 93; animation-delay: -4.5s; }
+.is-animating .rim-streak { animation-play-state: running; }
+@keyframes portrait-current { to { stroke-dashoffset: -100; } }
+
+.has-spotlight { position: relative; isolation: isolate; }
+.has-spotlight::before, .has-spotlight::after { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit; opacity: 0; pointer-events: none; transition: opacity 350ms ease; }
+.has-spotlight::before { background: radial-gradient(340px circle at var(--light-x, 50%) var(--light-y, 50%), rgba(0, 203, 160, .075), transparent 75%); }
+.has-spotlight::after { padding: 1px; background: radial-gradient(240px circle at var(--light-x, 50%) var(--light-y, 50%), rgba(125, 255, 222, .7), rgba(99, 190, 255, .2) 40%, transparent 75%); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; }
+@media (hover: hover) and (pointer: fine) {
+    .has-spotlight.is-lit::before, .has-spotlight.is-lit::after { opacity: 1; }
+}
+
+.reveal-ready { opacity: 0; transform: translateY(20px); transition: opacity 700ms var(--motion-ease), transform 700ms var(--motion-ease); transition-delay: var(--reveal-delay, 0ms); }
+.reveal-ready.is-revealed { opacity: 1; transform: none; }
+body.effects-paused .architecture-scene *, body.effects-paused .portrait-rim * { animation-play-state: paused !important; }
+
+@media (max-width: 760px) {
+    .architecture-scene { max-width: 580px; margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .architecture-scene *, .portrait-rim * { animation: none !important; }
+    .reveal-ready { opacity: 1; transform: none; transition: none; }
+    .has-spotlight::before, .has-spotlight::after { display: none; }
+}
+@media print {
+    .architecture-scene, .portrait-rim, .reading-progress { display: none !important; }
+    .has-spotlight::before, .has-spotlight::after { display: none; }
+    .reveal-ready { opacity: 1 !important; transform: none !important; transition: none !important; }
+}

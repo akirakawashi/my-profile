@@ -7,9 +7,12 @@
     <meta name="color-scheme" content="dark">
     <title>Александр Ожерельев | Fullstack / AI Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="effects.css">
     <script src="resume.js" defer></script>
+    <script src="effects.js" defer></script>
 </head>
 <body data-lang="ru">
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#experience" data-i18n="skip">Перейти к опыту работы</a>
     <div class="page-shell">
         <div class="controls-bar">
@@ -33,6 +36,63 @@
                 <p class="lead" data-i18n="lead1">Fullstack и AI-разработчик с 3 годами коммерческого опыта. Основной стек — Python, FastAPI, React, Next.js и TypeScript.</p>
                 <p class="lead" data-i18n="lead.ai">Работаю над продуктами целиком: от архитектуры и серверной логики до пользовательских интерфейсов, интеграции AI-моделей и запуска в production.</p>
                 <p class="lead lead--secondary" data-i18n="lead2">Развиваю действующую игровую платформу AiNoCraft. Помимо основной работы выполняю заказные проекты веб-сервисов, интеграций и AI-решений.</p>
+                <div class="architecture-scene" aria-hidden="true">
+                    <div class="scene-halo"></div>
+                    <svg viewBox="0 0 680 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="scene-glass" x1="280" y1="64" x2="400" y2="154" gradientUnits="userSpaceOnUse"><stop stop-color="#26494e"/><stop offset="1" stop-color="#101c2a"/></linearGradient>
+                            <linearGradient id="scene-plate" x1="224" y1="58" x2="456" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#00cba0" stop-opacity=".1"/><stop offset="1" stop-color="#65baff" stop-opacity=".02"/></linearGradient>
+                            <linearGradient id="scene-trail" x1="-22" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#00cba0" stop-opacity="0"/><stop offset="1" stop-color="#8affdb"/></linearGradient>
+                            <linearGradient id="scene-orbit-ink" x1="220" y1="160" x2="460" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#00cba0" stop-opacity=".1"/><stop offset=".5" stop-color="#69cfff" stop-opacity=".55"/><stop offset="1" stop-color="#00cba0" stop-opacity=".1"/></linearGradient>
+                            <path id="scene-route-a" d="M138 52H188L224 98H284"/>
+                            <path id="scene-route-b" d="M138 156H190L226 122H284"/>
+                            <path id="scene-route-c" d="M396 98H456L492 52H542"/>
+                            <path id="scene-route-d" d="M396 122H454L490 156H542"/>
+                            <path id="scene-orbit" d="M218 110a122 64 0 1 0 244 0a122 64 0 1 0-244 0"/>
+                        </defs>
+                        <g class="scene-grid" stroke="#496178" stroke-opacity=".13"><path d="M150 34H530M150 174H530M202 16V192M270 16V192M410 16V192M478 16V192" stroke-dasharray="2 8"/></g>
+                        <path d="M226 110L340 48L454 110L340 174Z" fill="url(#scene-plate)" stroke="#00cba0" stroke-opacity=".2"/>
+                        <path d="M226 110V119L340 183L454 119V110M340 174V183" stroke="#00cba0" stroke-opacity=".15"/>
+                        <use href="#scene-orbit" stroke="url(#scene-orbit-ink)" stroke-dasharray="2 7"/>
+                        <g stroke="#547a87" stroke-opacity=".5" stroke-width="1.3"><use href="#scene-route-a"/><use href="#scene-route-b"/><use href="#scene-route-c"/><use href="#scene-route-d"/></g>
+                        <g class="scene-port">
+                            <rect x="12" y="30" width="126" height="44" rx="9"/>
+                            <path d="M35 44L27 52L35 60M49 44L57 52L49 60M44 42L39 62" class="scene-icon"/>
+                            <path d="M75 47H119M75 57H102" class="scene-port-line"/>
+                        </g>
+                        <g class="scene-port">
+                            <rect x="12" y="134" width="126" height="44" rx="9"/>
+                            <path d="M29 148H55V164H29ZM33 144H51M38 153L34 156L38 159M45 153H50" class="scene-icon"/>
+                            <path d="M75 151H119M75 161H102" class="scene-port-line"/>
+                        </g>
+                        <g class="scene-port">
+                            <rect x="542" y="30" width="126" height="44" rx="9"/>
+                            <path d="M565 52L576 42L587 52L576 62ZM565 52H587M576 42V62" class="scene-icon"/>
+                            <path d="M604 47H649M604 57H632" class="scene-port-line"/>
+                        </g>
+                        <g class="scene-port">
+                            <rect x="542" y="134" width="126" height="44" rx="9"/>
+                            <ellipse cx="576" cy="148" rx="12" ry="5" class="scene-icon"/>
+                            <path d="M564 148V162C564 169 588 169 588 162V148M564 155C564 162 588 162 588 155" class="scene-icon"/>
+                            <path d="M604 151H649M604 161H632" class="scene-port-line"/>
+                        </g>
+                        <g class="scene-chip">
+                            <rect x="284" y="80" width="112" height="70" rx="13" fill="#0a141e" stroke="#2b6263"/>
+                            <path d="M297 66V76M314 66V76M331 66V76M348 66V76M365 66V76M382 66V76M297 144V154M314 144V154M331 144V154M348 144V154M365 144V154M382 144V154M274 89H284M274 103H284M274 117H284M274 131H284M396 89H406M396 103H406M396 117H406M396 131H406" stroke="#6fc7b9" stroke-opacity=".55" stroke-width="2"/>
+                            <rect x="284" y="74" width="112" height="70" rx="13" fill="url(#scene-glass)" stroke="#5fd6b7" stroke-opacity=".65"/>
+                            <rect x="296" y="86" width="88" height="46" rx="7" stroke="#00cba0" stroke-opacity=".28"/>
+                            <rect class="scene-core" x="311" y="94" width="58" height="30" rx="6" fill="#00cba0" fill-opacity=".08" stroke="#7af3d2" stroke-opacity=".5"/>
+                            <path d="M333 102L326 109L333 116M347 102L354 109L347 116M343 100L337 118" stroke="#a2ffe5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle class="scene-status" cx="377" cy="80" r="2" fill="#a2ffe5"/>
+                        </g>
+                        <g class="scene-packet" data-route="scene-route-a"><path d="M-22 0H0" stroke="url(#scene-trail)" stroke-width="2"/><circle r="2.5" fill="#b7ffe7"/></g>
+                        <g class="scene-packet" data-route="scene-route-b"><path d="M-22 0H0" stroke="url(#scene-trail)" stroke-width="2"/><circle r="2.5" fill="#b7ffe7"/></g>
+                        <g class="scene-packet" data-route="scene-route-c"><path d="M-22 0H0" stroke="url(#scene-trail)" stroke-width="2"/><circle r="2.5" fill="#b7ffe7"/></g>
+                        <g class="scene-packet" data-route="scene-route-d"><path d="M-22 0H0" stroke="url(#scene-trail)" stroke-width="2"/><circle r="2.5" fill="#b7ffe7"/></g>
+                        <g class="scene-satellite" data-route="scene-orbit"><circle r="6" fill="#6acfff" fill-opacity=".1"/><circle r="2" fill="#99dfff"/></g>
+                        <g class="scene-satellite" data-route="scene-orbit"><circle r="6" fill="#00cba0" fill-opacity=".12"/><circle r="2" fill="#a2ffe5"/></g>
+                    </svg>
+                </div>
             </div>
             <div class="masthead__aside">
                 <div class="contact-identity">
