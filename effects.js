@@ -31,11 +31,37 @@
         portrait.append(rim);
     }
 
-    // Build routes once from the drawing. During playback only transform and opacity change.
+    // Trace packets on the actual route so their tails bend with its corners.
+    // The orbit satellites keep their precomputed transform animation.
     if (scene && typeof Element.prototype.animate === 'function') {
         scene.querySelectorAll('[data-route]').forEach((packet, index) => {
             const route = document.getElementById(packet.dataset.route);
             const length = route.getTotalLength();
+            if (packet.classList.contains('scene-packet')) {
+                const layers = [[22, .1, 2], [14, .22, 2], [6, .5, 2], [.01, 1, 5]];
+                layers.forEach(([tail, opacity, width]) => {
+                    const trace = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+                    trace.setAttribute('href', '#' + route.id);
+                    trace.setAttribute('stroke', width === 5 ? '#b7ffe7' : '#8affdb');
+                    trace.setAttribute('stroke-width', width);
+                    trace.setAttribute('stroke-dasharray', `${tail} ${length + 44}`);
+                    packet.append(trace);
+                    const frames = [0, .125, .875, 1].map(fraction => ({
+                        strokeDashoffset: `${tail - fraction * length}px`,
+                        opacity: fraction === 0 || fraction === 1 ? 0 : opacity,
+                        offset: fraction,
+                    }));
+                    const animation = trace.animate(frames, {
+                        duration: 4600,
+                        delay: -index * 920,
+                        iterations: Infinity,
+                        easing: 'linear',
+                    });
+                    animation.pause();
+                    sceneAnimations.push(animation);
+                });
+                return;
+            }
             const frames = [];
             let previousAngle;
             for (let step = 0; step <= 64; step++) {
